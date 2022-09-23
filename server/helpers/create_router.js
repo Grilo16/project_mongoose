@@ -26,9 +26,9 @@ router.delete('/:id', (req, res) => {
     .then(result => {
     res.json(result)
     })
+});
    
 
-});
     return router
 }
 
