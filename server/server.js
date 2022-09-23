@@ -20,4 +20,3 @@ app.listen(9000, ()=>{
     console.log("listening on 9000 quack")
 })
 
-// LALALALAL the backend is gonna be here
