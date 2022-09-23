@@ -19,7 +19,13 @@ router.post("/add", (req, res)=> {
     .then(()=> res.json(req.body))
 })
 
-
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    collection
+    .deleteOne({ _id: ObjectID(id) })
+    .then(result => {
+    res.json(result)
+    })
     return router
 
 };
