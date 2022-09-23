@@ -1,10 +1,17 @@
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBarComponents/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
 import BodyStuff from "./components/BodyStuff";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import './App.css';
 
+
+const routes = [
+  {pageName: "home", pageLink: "/"},
+  {pageName: "body stuff", pageLink: "/body-stuff"},
+  {pageName: "about", pageLink: "/about"},
+  {pageName: "fuck", pageLink: "/fuck"}
+]
 
 const Test = function(){
   return (
@@ -23,7 +30,7 @@ function App() {
 
     <div className="App">
     <Router>
-    <NavBar/>
+    <NavBar routes={routes} />
       <Routes>
         <Route path="/" element={< Home/>} />
         <Route path="/body-stuff" element={< BodyStuff />}/>

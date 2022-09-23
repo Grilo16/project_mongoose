@@ -4,7 +4,7 @@ const BodyStuff = () => {
 
     return (
 
-        <h1>BodyStuff</h1>
+        <h1>Body Stuff</h1>
 
     )
 }
