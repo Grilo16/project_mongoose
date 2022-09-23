@@ -1,6 +1,11 @@
-import logo from './logo.svg';
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import About from "./components/About";
+import BodyStuff from "./components/BodyStuff";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import './App.css';
+
+
 const Test = function(){
   return (
     <h1>Testing</h1>
@@ -17,11 +22,12 @@ function App() {
   return (
 
     <div className="App">
-    {/* <NavBar/> */}
     <Router>
+    <NavBar/>
       <Routes>
-        <Route element={<Test/>} path="/home"/>
-        <Route element={<Test1/>} path="/home1"/>
+        <Route path="/" element={< Home/>} />
+        <Route path="/body-stuff" element={< BodyStuff />}/>
+        <Route path="/about" element={< About />}/>
       </Routes>
 
     </Router>
