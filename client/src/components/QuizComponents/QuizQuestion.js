@@ -36,7 +36,6 @@ const QuizQuestion = ({eachQuestion, eachAnswer, correctAnswers, setCorrectAnswe
     ? <p>{isAnswerCorrect}</p> 
     : null}
     </li>
-    {/* <div>You scored {score} out of 5!</div> */}
     </>
     )
 }
