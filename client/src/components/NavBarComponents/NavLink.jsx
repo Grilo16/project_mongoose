@@ -6,7 +6,7 @@ function NLink({route}) {
 
     return (
 
-            <a className='nav-link' href={route.pageLink}>{route.pageName}</a>
+            <button><a className='nav-link' href={route.pageLink}>{route.pageName}</a></button>
 
     )
 }
