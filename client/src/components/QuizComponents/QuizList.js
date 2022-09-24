@@ -13,7 +13,7 @@ const QuizList = function({organs, showOrgan}){
       });
       
     return (
-      <ul>{quizList}</ul>
+      <ul className='quizlistcontainer'>{quizList}</ul>
     )
   };
 

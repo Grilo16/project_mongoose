@@ -5,7 +5,7 @@ const Quiz = ({quizName, organId, showOrgan}) => {
     }
     
     return (
-        <li onClick={handleClick}>Take the quiz for {quizName}</li>
+        <button className='organquizclick' onClick={handleClick}>Take the quiz for {quizName}</button>
     )
 }
 export default Quiz

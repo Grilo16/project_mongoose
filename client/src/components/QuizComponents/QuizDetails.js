@@ -20,19 +20,19 @@ const QuizDetails = ({organToShow}) => {
         )})
 
     return (
-        <>
+        <div className='quizdetail'>
         {organToShow ?
         <div>
         <h2>Take the {organToShow[0].name} quiz!</h2>
-        <ol>{quizQuestionsToShow}</ol>
+        <ul className='quizdetail'>{quizQuestionsToShow}</ul>
         <p>You have answered {correctAnswers.length} questions correctly!</p>
         </div>
         :
-        <div>
-        <h3>Select an organ to take the quiz!</h3>
+        <div className='quizdetailheader'>
+        <h2>Select an organ to take the quiz!</h2>
         </div>
         }
-        </>
+        </div>
     )
 }
 
