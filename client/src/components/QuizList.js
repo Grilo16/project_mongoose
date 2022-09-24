@@ -1,12 +1,11 @@
 import Quiz from "./Quiz";
 
 const QuizList = function({organs, showOrgan}){
-  console.log(organs)
-  console.log(typeof(organs))
-    const quizList = organs.map((organ, index) => {
+    const quizList = organs.map((organ) => {
         return (
-          <Quiz
-            quiz={organ.quiz} //array of questions and answers
+          <Quiz           
+            quizName={organ.name} 
+            organId={organ.id}
             key={organ.id}
             showOrgan={showOrgan}
             />

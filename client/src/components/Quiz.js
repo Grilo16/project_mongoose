@@ -1,28 +1,11 @@
-
-const Quiz = ({quiz, showOrgan}) => {
-
-    // const quiztoShow = quiz.map((quizQuestions) => {
-    //     return (
-    //         <QuizQuestions
-    //         quizQuestion = {quizQuestions.question}
-    //         quizAnswer = {quizQuestions.answer}
-    //         key = {quizQuestions.id}
-    //         />
-
-    // })
-    console.log(quiz)
-
+const Quiz = ({quizName, organId, showOrgan}) => {
+    
     const handleClick = function(){
-            showOrgan(quiz.id)
-    };
-
+        showOrgan(organId)
+    }
+    
     return (
-        //need to map through the quiz for the questions
-        <>
-        <li>{quiz.id}</li>
-        </>      
-         )
-
+        <li onClick={handleClick}>Take the quiz for {quizName}</li>
+    )
 }
-
 export default Quiz
