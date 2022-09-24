@@ -20,25 +20,9 @@ const QuizQuestion = ({eachQuestion, eachAnswer}) => {
         } else {
             setIsAnswerCorrect("Answer is incorrect")
             }
-        // return displayAnswer()    
         
     }
     
-//     const displayAnswer = () => {
-//         if (inputAnswer.isCorrect !== 'unanswered') {
-//         if (inputAnswer.isCorrect){
-//             return <p>1</p>
-//         } else {
-//             return <p>2</p>
-//         }
-//     } else {
-//         return null
-//     }
-// }
-
-
-
-
     // console.log(answer)
     // console.log(answers)
 
