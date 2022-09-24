@@ -20,20 +20,20 @@ function App() {
 let listOfOrgans = [{name: "brain", 
                         id : 1, //will be provided by database
                         quiz : 
-                        [{id : 1, question : "This is question 1", answer:"This is answer 1"},
-                        {id : 2, question : "This is question 2", answer:"This is answer 2"},
-                        {id : 3, question : "This is question 3", answer:"This is answer 3"},
-                        {id : 4, question : "This is question 4", answer:"This is answer 4"},
-                        {id : 5, question : "This is question 5", answer:"This is answer 5"},]},
+                        [{id : 1, question : "Question 1 for brain", answer:"Answer 1 for brain"},
+                        {id : 2, question : "Question 2 for brain", answer:"Answer 2 for brain"},
+                        {id : 3, question : "Question 3 for brain", answer:"Answer 3 for brain"},
+                        {id : 4, question : "Question 4 for brain", answer:"Answer 4 for brain"},
+                        {id : 5, question : "Question 5 for brain", answer:"Answer 5 for brain"},]},
                         
                         {name: "heart", 
                         id : 2, //will be provided by database
                         "quiz" : 
-                        [{id : 1, question : "This is question 1", answer:"This is answer 1"},
-                        {id : 2, question : "This is question 2", answer:"This is answer 2"},
-                        {id : 3, question : "This is question 3", answer:"This is answer 3"},
-                        {id : 4, question : "This is question 4", answer:"This is answer 4"},
-                        {id : 5, question : "This is question 5", answer:"This is answer 5"},]
+                        [{id : 1, question : "Question 1 for heart", answer:"Answer 1 for heart"},
+                        {id : 2, question : "Question 2 for heart", answer:"Answer 2 for heart"},
+                        {id : 3, question : "Question 3 for heart", answer:"Answer 3 for heart"},
+                        {id : 4, question : "Question 4 for heart", answer:"Answer 4 for heart"},
+                        {id : 5, question : "Question 5 for heart", answer:"Answer 5 for heart"},]
                         } 
                         ]
                         

@@ -7,6 +7,7 @@ const QuizDetails = ({organToShow}) => {
         return (
             <QuizQuestion
             eachQuestion = {questions.question}
+            eachAnswer = {questions.answer}
             key = {questions.id}
             />
         )})
@@ -16,7 +17,7 @@ const QuizDetails = ({organToShow}) => {
         {organToShow ?
         <div>
         <h2>Take the {organToShow[0].name} quiz!</h2>
-        <ul>{quizQuestionsToShow}</ul>
+        <ol>{quizQuestionsToShow}</ol>
         </div>
         :
         <div>
