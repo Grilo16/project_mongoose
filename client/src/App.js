@@ -69,6 +69,11 @@ const clearDb = ()=>{
   organs.map(organ => organRepo.deleteOrganByID(organ._id))
 }
 
+const initialUsers = [{guestName: "Katie", guestComment: "", quizScore : 0}, {guestName : "Mike", guestComment: "", quizScore : 0}]
+
+const [users, setUsers] = useState(initialUsers)
+const [selectedUser, setSelectedUser] = useState()
+
 const [organs, setOrgans] = useState([])
 const [organToShow, setOrganToShow] = useState('')
 
@@ -77,6 +82,9 @@ useEffect(()=>{
   .then(setOrgans)
 }, [])
 
+const onUserSelected = (user) => {
+  setSelectedUser(user)
+}
 
 const showOrgan = function(organID){
   const organ = organs.filter((organ) => organ.id === organID)
@@ -99,6 +107,7 @@ useEffect(() =>{
     setComments(data)
   })
 }, [])
+
 
 const addComments = (comment) => {
   let temp = comments.map(comment => comment);
@@ -125,8 +134,11 @@ const deleteComment = (id) => {
           <Route path="/" element={< Home/>} />
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
+          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser}/>}/>
+
           <Route path="/comment" element={< CommentContainer comment={comments} deleteComment={deleteComment} addComment={addComments}  />}/>
-          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} />}/>
+
+
           {/* <Route element={<Feedback />} path='/Feedback' /> */}
         </Routes>
       </Router>

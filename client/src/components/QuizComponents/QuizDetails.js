@@ -1,11 +1,10 @@
 import QuizQuestion from "./QuizQuestion"
 import { useState } from "react"
-const QuizDetails = ({organToShow, savedScores, setSavedScores}) => {
+const QuizDetails = ({organToShow}) => {
 
     const [correctAnswers, setCorrectAnswers] = useState([])
 
     const score = correctAnswers.length
-    setSavedScores(score)
 
     if(!organToShow) return "Select an organ to take the quiz!"
 
