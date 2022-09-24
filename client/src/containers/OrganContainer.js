@@ -1,6 +1,6 @@
 
-import OrganCard from "../components/OrganCard"
-import OrgansGrid from "../components/OrgansGrid"
+import OrganCard from "../components/OrganComponents/OrganCard"
+import OrgansGrid from "../components/OrganComponents/OrgansGrid"
 
 const OrganContainer = ({ organs, organToShow, showOrgan }) => {
   return (
