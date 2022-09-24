@@ -1,9 +1,9 @@
 import {useState} from 'react'
-const QuizQuestion = ({eachQuestion, eachAnswer}) => {
+const QuizQuestion = ({eachQuestion, eachAnswer, correctAnswers, setCorrectAnswers}) => {
 
     const [answer, setAnswer] = useState('')
     const [isAnswerCorrect, setIsAnswerCorrect] = useState('')
-    const [answers, setAnswers] = useState([])
+ 
 
     const handleAnswerChange = (e) => {
         setAnswer(e.target.value)
@@ -12,22 +12,16 @@ const QuizQuestion = ({eachQuestion, eachAnswer}) => {
     const checkAnswer = (e) => {
         e.preventDefault()
         const submittedAnswer = answer
-        const copyAnswers = [...answers]
-        copyAnswers.push(submittedAnswer)
-        setAnswers(copyAnswers)
         if (submittedAnswer === eachAnswer) {
-            setIsAnswerCorrect("Answer is correct")
+            setIsAnswerCorrect("Well done - answer is correct!")
+            const copyCorrectAnswers = [...correctAnswers]
+            copyCorrectAnswers.push(submittedAnswer)
+            setCorrectAnswers(copyCorrectAnswers)
         } else {
-            setIsAnswerCorrect("Answer is incorrect")
+            setIsAnswerCorrect("That answer is incorrect - please try again!")
             }
         
     }
-    
-    // console.log(answer)
-    // console.log(answers)
-
-    // answers needs to loop all questions and make the array - this is a placeholder for now
-    const score = answers.length
 
     return (
     <>
@@ -42,7 +36,7 @@ const QuizQuestion = ({eachQuestion, eachAnswer}) => {
     : null}
      
     </li>
-    <div>You scored {score} out of 5!</div>
+    {/* <div>You scored {score} out of 5!</div> */}
     </>
     )
 }
