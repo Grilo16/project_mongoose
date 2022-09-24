@@ -1,12 +1,15 @@
 import NavBar from "./components/NavBarComponents/NavBar";
 import Home from "./components/HomeComponents/HomeComponent";
 import About from "./components/AboutComponents/AboutComponent";
-import Comment from "./components/CommentComponents/CommentComponent";
+import Comment from "./components/CommentComponents/CommentGrid";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { useEffect, useState } from 'react';
 import QuizContainer from './containers/QuizContainer';
 import OrgansContainer from './containers/OrganContainer';
+import CommentContainer from "./containers/CommentContainer";
 import organRepo from "./repositories/organ_repository"
+import { getComments ,deleteComments } from "./Comment_services/Comment_services";
+
 import './App.css';
 
 
@@ -88,7 +91,28 @@ const navPages = [
 ]
 
 
+const [comments, setComments] = useState([]);
+useEffect(() =>{
+  getComments()
+  .then((data) =>{
+    setComments(data)
+  })
+}, [])
 
+const addComments = (comment) => {
+  let temp = comments.map(comment => comment);
+  temp.push(comment);
+  setComments(temp)
+}
+
+const deleteComment = (id) => {
+  deleteComment(id).then(() => {
+    let temp = comments.map((g) => g)
+    const toDel = comments.map((g) => g._id).indexOf(id)
+    temp.splice(toDel, 1)
+    setComments(temp)
+  })
+}
 
   return (
     <>
@@ -100,7 +124,7 @@ const navPages = [
          <Route path="/" element={< Home/>} />
          <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
-          <Route path="/comment" element={< Comment />}/>
+          <Route path="/comment" element={< CommentContainer comment={comments} deleteComment={deleteComment} addComment={addComments}  />}/>
           <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} />}/>
           {/* <Route element={<Feedback />} path='/Feedback' /> */}
         </Routes>
