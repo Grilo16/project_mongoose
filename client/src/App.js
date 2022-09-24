@@ -1,7 +1,6 @@
 import NavBar from "./components/NavBarComponents/NavBar";
 import Home from "./components/HomeComponent";
 import About from "./components/AboutComponent";
-import Organs from "./components/OrgansComponent";
 import Comment from "./components/CommentComponent";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { useEffect, useState } from 'react';
@@ -14,12 +13,6 @@ import './App.css';
 function App() {
 
 
-const routes = [
-  {pageName: "Home", pageLink: "/"},
-  {pageName: "Organs", pageLink: "/organs"},
-  {pageName: "About", pageLink: "/about"},
-  {pageName: "Comment", pageLink: "/comment"}
-]
 
 const seeder = ()=>{
 let listOfOrgans = [
@@ -90,40 +83,29 @@ const showOrgan = function(organID){
   setOrganToShow(organ)     
 };
 
+const navPages = [
+  {pageName: "Home", pageLink: "/"},
+  {pageName: "Organs", pageLink: "/organs"},
+  {pageName: "Quizes", pageLink: "/quizzes"},
+  {pageName: "Comment", pageLink: "/comment"},
+  {pageName: "About", pageLink: "/about"},
+]
+
+
   return (
-    <div className='App'>
-      {/* <NavBar/> */}
+    <>
+    <NavBar navPages={navPages}/>
       <Router>
         <Routes>
          <Route path="/" element={< Home/>} />
-         <Route path="/organs" element={< Organs />}/>
+         <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
           <Route path="/comment" element={< Comment />}/>
-          <Route element={<Home />} path='/' />
-          <Route
-            element={
-              <OrgansContainer
-                organs={organs}
-                organToShow={organToShow}
-                showOrgan={showOrgan}
-              />
-            }
-            path='/organs'
-          />
+          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} />}/>
           {/* <Route element={<Feedback />} path='/Feedback' /> */}
-          <Route
-            element={
-              <QuizContainer
-                organs={organs}
-                organToShow={organToShow}
-                showOrgan={showOrgan}
-              />
-            }
-            path='/quizzes'
-          />
         </Routes>
       </Router>
-    </div>
+</>
   )
 }
 

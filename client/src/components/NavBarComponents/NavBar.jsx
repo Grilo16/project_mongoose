@@ -4,13 +4,12 @@ import NLink from './NavLink'
 
 
 
-const NavBar = ({ routes }) => {
+const NavBar = ({ navPages }) => {
 
-    const navLinks = routes.map((route) => {
+    const navLinks = navPages.map((route) => {
         return (
             <>
             <NLink route={route}/>
-            <br/>
             <hr/>
             </>
         )
