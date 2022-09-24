@@ -1,18 +1,20 @@
 import logo from './logo.svg';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import QuizContainer from './containers/QuizContainer';
 import OrgansContainer from './containers/OrganContainer';
+import organRepo from "./repositories/organ_repository"
+
 
 const Home = function(){
-  return (
+
+return (
+    <>
     <h1>Howdy Im a homepage for a science app </h1>
+    </>
   )
 }
-
-
-
 
 const Feedback = function () {
   return <h3>And I am the feedback page</h3>
@@ -20,6 +22,7 @@ const Feedback = function () {
 
 function App() {
 
+const seeder = ()=>{
 let listOfOrgans = [
   {
     name: 'Brain',
@@ -63,9 +66,25 @@ let listOfOrgans = [
     ],
   },
 ]
-                        
-const [organs, setOrgans] = useState(listOfOrgans)
+listOfOrgans.map(organRepo.addOrganToDb)
+} 
+
+const clearDb = ()=>{
+  organs.map(organ => organRepo.deleteOrganByID(organ._id))
+}
+
+const [organs, setOrgans] = useState([])
 const [organToShow, setOrganToShow] = useState('')
+
+useEffect(()=>{
+  // seeder()
+  // clearDb()
+  // Uncoment either to seed or clear the database (just for you adam lol)
+
+  organRepo.getOrganList()
+  .then(setOrgans)
+}, [])
+
 
 const showOrgan = function(organID){
   const organ = organs.filter((organ) => organ.id === organID)
@@ -98,8 +117,7 @@ const showOrgan = function(organID){
                 showOrgan={showOrgan}
               />
             }
-            path='/quizzes' */}
-          />
+            path='/quizzes' /> */}
         </Routes>
       </Router>
     </div>
