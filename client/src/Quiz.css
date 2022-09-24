@@ -1,0 +1,58 @@
+.quizcontainer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.quizlistcontainer {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    margin: 2em 1em;
+}
+
+.organquizclick {
+    border: 2px solid grey;
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 100px
+}
+
+.organquizclick:hover {
+    color: white;
+    background-color: black;
+}
+
+.quizdetail {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 10px
+  
+}
+
+.quizdetailheader {
+    font-size: 40pt;
+}
+
+.questionandanswer {
+    padding: 5px
+}
+
+.inputanswer {
+    margin: 5px
+}
+
+.submitbutton {
+    color: black;
+    background-color: white;
+    margin: 5px
+}
+
+.submitbutton:hover {
+    color: white;
+    background-color: black;
+}

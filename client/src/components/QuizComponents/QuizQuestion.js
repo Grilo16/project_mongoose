@@ -25,18 +25,17 @@ const QuizQuestion = ({eachQuestion, eachAnswer, correctAnswers, setCorrectAnswe
 
     return (
     <>
-    <li>{eachQuestion}
-    
+    <li className='questionandanswer'>{eachQuestion}
     <form className="" onSubmit={checkAnswer}>
-    <input type="text" id="answer" onChange={handleAnswerChange} required/>
-    <input type="submit" value="Submit Answer" id="answer"/>   
+    <input className = 'inputanswer' type="text" id="answer" onChange={handleAnswerChange} required/>
+    <div >
+    <input className = 'submitbutton' type="submit" value="Submit Answer" id="answer"/>  
+    </div>
     </form>
     {isAnswerCorrect 
     ? <p>{isAnswerCorrect}</p> 
     : null}
-     
     </li>
-    {/* <div>You scored {score} out of 5!</div> */}
     </>
     )
 }
