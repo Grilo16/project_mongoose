@@ -11,9 +11,6 @@ const Home = function(){
   )
 }
 
-
-
-
 const Feedback = function () {
   return <h3>And I am the feedback page</h3>
 }
@@ -53,7 +50,7 @@ let listOfOrgans = [
     name: 'Liver',
     info: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
     url: 'https://spng.pngfind.com/pngs/s/311-3114925_image-showing-human-lungs-human-lung-hd-png.png',
-    id: 2, //will be provided by database
+    id: 3, //will be provided by database
     quiz: [
       {id : 1, question : "Question 1 for liver", answer:"Answer 1 for liver"},
       {id : 2, question : "Question 2 for liver", answer:"Answer 2 for liver"},
@@ -89,7 +86,7 @@ const showOrgan = function(organID){
             path='/organs'
           />
 
-          {/* <Route element={<Feedback />} path='/Feedback' />
+          {/* <Route element={<Feedback />} path='/Feedback' /> */}
           <Route
             element={
               <QuizContainer
@@ -98,7 +95,7 @@ const showOrgan = function(organID){
                 showOrgan={showOrgan}
               />
             }
-            path='/quizzes' */}
+            path='/quizzes'
           />
         </Routes>
       </Router>
