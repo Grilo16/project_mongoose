@@ -1,26 +1,25 @@
-import logo from './logo.svg';
+import NavBar from "./components/NavBarComponents/NavBar";
+import Home from "./components/HomeComponent";
+import About from "./components/AboutComponent";
+import Organs from "./components/OrgansComponent";
+import Comment from "./components/CommentComponent";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import './App.css';
 import { useEffect, useState } from 'react';
 import QuizContainer from './containers/QuizContainer';
 import OrgansContainer from './containers/OrganContainer';
 import organRepo from "./repositories/organ_repository"
+import './App.css';
 
-
-const Home = function(){
-
-return (
-    <>
-    <h1>Howdy Im a homepage for a science app </h1>
-    </>
-  )
-}
-
-const Feedback = function () {
-  return <h3>And I am the feedback page</h3>
-}
 
 function App() {
+
+
+const routes = [
+  {pageName: "Home", pageLink: "/"},
+  {pageName: "Organs", pageLink: "/organs"},
+  {pageName: "About", pageLink: "/about"},
+  {pageName: "Comment", pageLink: "/comment"}
+]
 
 const seeder = ()=>{
 let listOfOrgans = [
@@ -96,6 +95,10 @@ const showOrgan = function(organID){
       {/* <NavBar/> */}
       <Router>
         <Routes>
+         <Route path="/" element={< Home/>} />
+         <Route path="/organs" element={< Organs />}/>
+          <Route path="/about" element={< About />}/>
+          <Route path="/comment" element={< Comment />}/>
           <Route element={<Home />} path='/' />
           <Route
             element={
@@ -107,7 +110,6 @@ const showOrgan = function(organID){
             }
             path='/organs'
           />
-
           {/* <Route element={<Feedback />} path='/Feedback' /> */}
           <Route
             element={
@@ -119,7 +121,6 @@ const showOrgan = function(organID){
             }
             path='/quizzes'
           />
-
         </Routes>
       </Router>
     </div>
