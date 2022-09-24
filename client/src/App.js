@@ -69,10 +69,6 @@ const [organs, setOrgans] = useState([])
 const [organToShow, setOrganToShow] = useState('')
 
 useEffect(()=>{
-  // seeder()
-  // clearDb()
-  // Uncoment either to seed or clear the database (just for you adam lol)
-
   organRepo.getOrganList()
   .then(setOrgans)
 }, [])
@@ -92,9 +88,13 @@ const navPages = [
 ]
 
 
+
+
   return (
     <>
     <NavBar navPages={navPages}/>
+    <button onClick={seeder}>Seed db</button>
+    <button onClick={clearDb}>Clear Db</button>
       <Router>
         <Routes>
          <Route path="/" element={< Home/>} />
