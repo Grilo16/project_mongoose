@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBarComponents/NavBar";
+import NLink from "./components/NavBarComponents/NavLink";
 import Home from "./components/HomeComponents/HomeComponent";
 import About from "./components/AboutComponents/AboutComponent";
 import Comment from "./components/CommentComponents/CommentComponent";
@@ -91,21 +92,21 @@ const navPages = [
 
 
   return (
-    <>
-    <NavBar navPages={navPages}/>
+    <div className="App" id="outer-container">
+    <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
     <button onClick={seeder}>Seed db</button>
     <button onClick={clearDb}>Clear Db</button>
       <Router>
         <Routes>
-         <Route path="/" element={< Home/>} />
-         <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
+          <Route path="/" element={< Home/>} />
+          <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
           <Route path="/comment" element={< Comment />}/>
           <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} />}/>
           {/* <Route element={<Feedback />} path='/Feedback' /> */}
         </Routes>
       </Router>
-</>
+    </div>
   )
 }
 
