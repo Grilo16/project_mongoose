@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBarComponents/NavBar";
-import Home from "./components/HomeComponent";
-import About from "./components/AboutComponent";
-import Comment from "./components/CommentComponent";
+import Home from "./components/HomeComponents/HomeComponent";
+import About from "./components/AboutComponents/AboutComponent";
+import Comment from "./components/CommentComponents/CommentComponent";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { useEffect, useState } from 'react';
 import QuizContainer from './containers/QuizContainer';
