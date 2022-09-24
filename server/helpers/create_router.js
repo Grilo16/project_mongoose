@@ -1,35 +1,43 @@
 const express = require("express")
+const data_repository = require("./data_repository") 
+
 
 const createRouter = function(collection){
-
 const router = express.Router()
 
 router.get("/", (req, res) => {
-    collection
-    .find()
-    .toArray()
-    .then((result) => res.json(result))
-    console.log("hello")
+    data_repository.getAll(collection)
+                    .then((result) => res.json(result))
     })
 
 
 router.post("/add", (req, res)=> {
-    collection
-    .insertOne(req.body)
-    .then(()=> res.json(req.body))
+    data_repository.addToDb(collection, req.body)
+                    .then(() => res.json(req.body))
+
 })
 
-router.delete('/:id', (req, res) => {
+router.delete('/delete/:id', (req, res) => {
     const id = req.params.id;
-    collection
-    .deleteOne({ _id: ObjectID(id) })
-    .then(result => {
-    res.json(result)
-    })
+    data_repository.deleteById(collection, id)
+                    .then(()=>{
+                        data_repository.getAll(collection)
+                                        .then(result => res.json(result))
+                    })
 });
    
+router.patch("/edit/:id", (req, res)=>{
+    const id = req.params.id
+    data_repository.editById(collection, id, req.body)
+                    .then(()=>{
+                        data_repository.getAll(collection)
+                                        .then(result => res.json(result))
+                    })
+})
 
     return router
 }
 
 module.exports = createRouter
+
+
