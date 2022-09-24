@@ -1,16 +1,17 @@
 import NavBar from "./components/NavBarComponents/NavBar";
-import Home from "./components/Home";
-import About from "./components/About";
-import BodyStuff from "./components/BodyStuff";
+import Home from "./components/HomeComponent";
+import About from "./components/AboutComponent";
+import Organs from "./components/OrgansComponent";
+import Comment from "./components/CommentComponent";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import './App.css';
 
 
 const routes = [
-  {pageName: "home", pageLink: "/"},
-  {pageName: "body stuff", pageLink: "/body-stuff"},
-  {pageName: "about", pageLink: "/about"},
-  {pageName: "fuck", pageLink: "/fuck"}
+  {pageName: "Home", pageLink: "/"},
+  {pageName: "Organs", pageLink: "/organs"},
+  {pageName: "About", pageLink: "/about"},
+  {pageName: "Comment", pageLink: "/comment"}
 ]
 
 const Test = function(){
@@ -33,8 +34,9 @@ function App() {
     <NavBar routes={routes} />
       <Routes>
         <Route path="/" element={< Home/>} />
-        <Route path="/body-stuff" element={< BodyStuff />}/>
+        <Route path="/organs" element={< Organs />}/>
         <Route path="/about" element={< About />}/>
+        <Route path="/comment" element={< Comment />}/>
       </Routes>
 
     </Router>

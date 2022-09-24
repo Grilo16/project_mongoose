@@ -19,10 +19,11 @@ const NavBar = ({ routes }) => {
 
     return (
 
-    <nav className='nav-bar'>
-    {navLinks}
-    </nav>
-
+        <>
+        <nav className='nav-bar'>
+        {navLinks}
+        </nav>
+        </>
     ) 
 }
 

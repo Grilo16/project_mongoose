@@ -1,3 +1,16 @@
 .nav-bar {
     background-color: aqua;
+    width: 100px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    height: 100%;  
 }
+
+.nav-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
