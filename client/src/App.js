@@ -10,6 +10,7 @@ import OrgansContainer from './containers/OrganContainer';
 import CommentContainer from "./containers/CommentContainer";
 import organRepo from "./repositories/organ_repository"
 import { getComments ,deleteComments } from "./Comment_services/Comment_services";
+import LeaderBoard from "./components/HomeComponents/LeaderBoard";
 
 import './App.css';
 
@@ -69,7 +70,10 @@ const clearDb = ()=>{
   organs.map(organ => organRepo.deleteOrganByID(organ._id))
 }
 
-const initialUsers = [{guestName: "Katie", guestComment: "", quizScore : 0}, {guestName : "Mike", guestComment: "", quizScore : 0}]
+const initialUsers = [
+  {guestName: "Katie", guestComment: "", quizScore : 0}, 
+  {guestName : "Mike", guestComment: "", quizScore : 0}
+]
 
 const [users, setUsers] = useState(initialUsers)
 const [selectedUser, setSelectedUser] = useState()
@@ -140,8 +144,10 @@ const deleteComment = (id) => {
 
 
           {/* <Route element={<Feedback />} path='/Feedback' /> */}
+          
         </Routes>
       </Router>
+      <LeaderBoard/>
     </div>
   )
 }
