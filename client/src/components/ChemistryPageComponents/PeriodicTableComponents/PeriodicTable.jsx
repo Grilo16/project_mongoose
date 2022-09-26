@@ -1,16 +1,21 @@
 import "./PeriodicTable.css"
+import Element from "./Element";
 
 
-import PeriodicElement from "./Element";
+
 
   const PeriodicTable = ({elements})=>{
+
+    const tableWidth = 800 
+
+
     const PeriodicTable = elements.map((elementData)=>{
       return (
-            <PeriodicElement elementData={elementData}/>
+            <Element tableWidth={tableWidth} elementData={elementData}/>
       )
     })
     return (
-      <div className="periodic-table">
+      <div style={{"height":tableWidth/+"px", "width": tableWidth+"px"}} className="periodic-table">
         {PeriodicTable}
       </div>
     )

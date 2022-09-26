@@ -1,11 +1,8 @@
 .periodic-table {
     display: grid;
-    gap: 5px;
+    gap: 0.5%;
     grid-template-columns: repeat(18, 1fr);
-    height: fit-content;
-    width: 120vh;
     margin-left: 30vh;
-    padding-bottom: 20vh;
   }
   
   
@@ -155,7 +152,7 @@
   }
   
   .periodic-table div:nth-child(21){
-    margin-right:40px;
+    margin-right: 5vh;
   
   }
   
@@ -208,12 +205,7 @@
   
   
   
-  .periodic-element {
-    background-color: grey;
-    height: 69px ;
-    width: 69px ;
-    border-radius: 5px;
-  }
+
   .periodic-element:hover{
     background-color: orange;
     
@@ -255,41 +247,4 @@
   
   
   
-  
-  
-  
-  .atomic-weight{
-    margin-top: 2px;
-    display: flex;
-    font-size: x-small;
-  }
-  
-  .atomic-number{
-    margin:0;
-    width: 23px;
-    text-align: center;
-  
-  }
-  
-  .atomic-mass{
-    text-align: right;
-    width: 46px;
-    margin: 0;
-    margin-right: 4px;
-  
-  }
-  
-  .element-symbol{
-    height: 35px;
-    font-size: x-large;
-    text-align: center;
-    margin: 0px;
-    margin-top: 1px;
-  }
-  
-  .element-name{
-    font-size: x-small;
-    text-align: center;
-    margin: 0px;
-  
-  } 
+ 

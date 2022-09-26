@@ -1,0 +1,32 @@
+.periodic-element {
+  background-color: rgb(237, 6, 6);
+}
+
+.atomic-weight {
+
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.atomic-number { 
+  margin: 0;
+  margin-left: 2%;
+}
+
+.atomic-mass {
+    text-align: right;
+      margin: 0;
+      margin-right: 2%;
+}
+
+.element-symbol {
+  text-align: center;
+  margin: 0px;
+  margin-top: 1px;
+}
+
+.element-name {
+  text-align: center;
+  margin: 0px;
+}

@@ -13,6 +13,7 @@ import userRepo from "./repositories/user_repository"
 
 
 import './App.css';
+import ChemistryPageContainer from "./containers/ChemistryPageContainer";
 
 
 function App() {
@@ -127,7 +128,7 @@ useEffect(()=>{
 
           <Route path="/" element={< Home users={users} onUserSelected={showUser}  setSelectedUser={setSelectedUser} addNewUser={addNewUser}/>}/>
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
-          <Route path="/chemistry" element={< About />}/>
+          <Route path="/chemistry" element={< ChemistryPageContainer/>}/>
           <Route path="/about" element={< About />}/>
           <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={showUser} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>}/>
 
