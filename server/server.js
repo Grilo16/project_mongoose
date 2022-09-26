@@ -12,10 +12,15 @@ MongoClient.connect("mongodb://localhost:27017", {useUnifiedTopology: true})
     const db = client.db("projectdb")
     const organCollection = db.collection("organs")
     const userCollection= db.collection("users")
+    const commentCollection = db.collection("comments")
+    
     const organRoutes = createRouter(organCollection)
     const userRoutes = createRouter(userCollection)
+    const commentRoutes = createRouter(commentCollection)
+    
     app.use("/organ", organRoutes)
     app.use("/user", userRoutes)
+    app.user("/comments", commentRoutes)
 })
 
 
