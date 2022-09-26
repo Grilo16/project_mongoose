@@ -135,7 +135,7 @@ const deleteComment = (id) => {
     <button onClick={clearDb}>Clear Db</button>
       <Router>
         <Routes>
-          <Route path="/" element={< Home/>} />
+          <Route path="/" element={< Home users={users}/>} />
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
           <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser}/>}/>
@@ -147,7 +147,6 @@ const deleteComment = (id) => {
           
         </Routes>
       </Router>
-      <LeaderBoard/>
     </div>
   )
 }

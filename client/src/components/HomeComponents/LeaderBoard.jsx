@@ -1,9 +1,9 @@
 import React from 'react'
 import LeaderBoardItem from './LeaderBoardItem'
 
-const LeaderBoard = ({initialUsers}) => {
+const LeaderBoard = ({users}) => {
 
-    const leaderList = initialUsers.map((user) => {
+    const leaderList = users.map((user) => {
         return <LeaderBoardItem key={user.guestName} user={user}/>
     })
 
@@ -11,10 +11,16 @@ const LeaderBoard = ({initialUsers}) => {
 
         return (
                 <>
-                <div>LeaderBoard</div>
-                <ul>
-                    {leaderList}
-                </ul>
+                
+                <table >
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                    <td>{leaderList}</td>
+                    </tr>
+                </table>
                 </>
 
     )

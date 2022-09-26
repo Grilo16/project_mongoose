@@ -1,14 +1,16 @@
 import React from 'react'
+import LeaderBoard from './LeaderBoard'
 
 const LeaderBoardItem = ({user}) => {
 
     return (
 
         <div>
-            <li>
-                <h4>{user.guestName}</h4>
-                <h4>{user.quizScore}</h4>
-            </li>
+        
+            <tr>
+                <td>{user.guestName}</td>
+                <td>{user.quizScore}</td>
+            </tr>
         </div>
 
     )
