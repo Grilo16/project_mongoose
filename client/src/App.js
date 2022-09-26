@@ -78,15 +78,7 @@ const navPages = [
   {pageName: "About", pageLink: "/about"},
 ]
 
-const [users, setUsers] = useState(initialUsers)
-const [selectedUser, setSelectedUser] = useState('')
-
-const [organs, setOrgans] = useState([])
-const [organToShow, setOrganToShow] = useState('')
-
-
-
-const onUserSelected = (user) => {
+const showUser = (user) => {
   setSelectedUser(user)
 }
 
@@ -129,10 +121,10 @@ useEffect(()=>{
 
 
 
-          <Route path="/" element={< Home users ={users} onUserSelected ={onUserSelected} addUserToState={addUserToState}/>} />
+          <Route path="/" element={< Home users={users} onUserSelected={showUser}  setSelectedUser={setSelectedUser} addNewUser={addNewUser}/>}/>
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
-          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>}/>
+          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={showUser} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>}/>
 
           <Route path="/comment" element={< CommentContainer users={users} selectedUser={selectedUser} editUser={editUser} addNewUser={addNewUser} />}/>
 

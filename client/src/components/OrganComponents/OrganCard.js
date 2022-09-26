@@ -2,7 +2,7 @@ import React from 'react'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 
-const OrganCard = ({ organToShow, organ }) => {
+const OrganCard = ({ organ }) => {
   return (
     <>
       <p>Name: {organ.name}</p>
@@ -17,12 +17,4 @@ const OrganCard = ({ organToShow, organ }) => {
   )
 }
 
-
-
-const PopupExample = () => (
-  
-  <Popup trigger={<button> Trigger</button>} position='right center'>
-    <div>Popup content here !!</div>
-  </Popup>
-)
 export default OrganCard
