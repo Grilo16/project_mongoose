@@ -20,7 +20,7 @@ MongoClient.connect("mongodb://localhost:27017", {useUnifiedTopology: true})
     
     app.use("/organ", organRoutes)
     app.use("/user", userRoutes)
-    app.user("/comments", commentRoutes)
+    app.use("/comment", commentRoutes)
 })
 
 
