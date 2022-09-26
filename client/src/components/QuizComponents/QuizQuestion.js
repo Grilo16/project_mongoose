@@ -13,12 +13,12 @@ const QuizQuestion = ({eachQuestion, eachAnswer, correctAnswers, setCorrectAnswe
         e.preventDefault()
         const submittedAnswer = answer
         if (submittedAnswer.toLowerCase() === eachAnswer) {
-            setIsAnswerCorrect("Well done - answer is correct!")
             const copyCorrectAnswers = [...correctAnswers]
-            const answerAlreadySubmitted = correctAnswers.find(answers => submittedAnswer)
+            const answerAlreadySubmitted = copyCorrectAnswers.find(answer => answer === submittedAnswer)
             if (!answerAlreadySubmitted) {
                 copyCorrectAnswers.push(submittedAnswer)
                 setCorrectAnswers(copyCorrectAnswers)
+                setIsAnswerCorrect("Well done - answer is correct!")
             }
             else {
                 setIsAnswerCorrect("You have already completed this question, please try a new question!")
