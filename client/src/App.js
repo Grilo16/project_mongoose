@@ -18,7 +18,6 @@ import './App.css';
 function App() {
 
 
-
 const seeder = ()=>{
 let listOfOrgans = [
   {
@@ -70,6 +69,9 @@ const clearDb = ()=>{
   organs.map(organ => organRepo.deleteOrganByID(organ._id))
 }
 
+
+
+
 const navPages = [
   {pageName: "Home", pageLink: "/"},
   {pageName: "Organs", pageLink: "/organs"},
@@ -113,11 +115,12 @@ useEffect(()=>{
 
   return (
     <div className="App" id="outer-container">
-    <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
     <button onClick={seeder}>Seed db</button>
     <button onClick={clearDb}>Clear Db</button>
       <Router>
+      <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <Routes>
+
 
 
 
@@ -132,6 +135,7 @@ useEffect(()=>{
           <Route path="/about" element={< About />}/>
           
           {/* <Route element={<Feedback />} path='/Feedback' /> */}
+          
 
         </Routes>
       </Router>
