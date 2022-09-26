@@ -1,8 +1,6 @@
 import React from 'react'
 import UserSelector from './UserSelector'
 import NewUser from './NewUser'
-// import './HomeComponent.css'
-
 
 const Home = ({users, onUserSelected, addUserToState}) => {
 

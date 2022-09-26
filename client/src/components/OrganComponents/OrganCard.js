@@ -1,14 +1,28 @@
-const OrganCard = ({ organToShow , organ }) => {
+import React from 'react'
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css'
+
+const OrganCard = ({ organToShow, organ }) => {
   return (
     <>
-      
-      <p>Name: <a href="Do I need this link here?">{organ.name}</a></p>
-      <p><img src={organ.url}width="150" height="150"></img></p>
-      <p>info: {organ.info}</p>
-      {/* <p>Picture: {organ.url}</p>
-      <p>info: {organ.info}</p> */}
+      <p>Name: {organ.name}</p>
+      <p>
+        <img src={organ.url} width='150' height='150'></img>
+      </p>
+     
+      <Popup trigger={<button> Teach me!</button>} position='right center'>
+        <div>{organ.info}</div>
+      </Popup>
     </>
   )
 }
 
+
+
+const PopupExample = () => (
+  
+  <Popup trigger={<button> Trigger</button>} position='right center'>
+    <div>Popup content here !!</div>
+  </Popup>
+)
 export default OrganCard
