@@ -78,6 +78,14 @@ const navPages = [
   {pageName: "About", pageLink: "/about"},
 ]
 
+const [users, setUsers] = useState(initialUsers)
+const [selectedUser, setSelectedUser] = useState('')
+
+const [organs, setOrgans] = useState([])
+const [organToShow, setOrganToShow] = useState('')
+
+
+
 const onUserSelected = (user) => {
   setSelectedUser(user)
 }
@@ -88,10 +96,7 @@ const showOrgan = function(organID){
 };
 
 const [users, setUsers] = useState([])
-const [selectedUser, setSelectedUser] = useState({"_id": "63317da162617008d3b28715",
-"guestName": "Katie",
-"guestComment": "it wooooorks",
-"quizScore": 0})
+const [selectedUser, setSelectedUser] = useState({})
 
 const [organs, setOrgans] = useState([])
 const [organToShow, setOrganToShow] = useState("")
@@ -114,7 +119,6 @@ useEffect(()=>{
   .then(setUsers)
 }, [])
 
-
   return (
     <div className="App" id="outer-container">
     <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
@@ -123,11 +127,12 @@ useEffect(()=>{
       <Router>
         <Routes>
 
-          <Route path="/" element={< Home/>} />
 
+
+          <Route path="/" element={< Home users ={users} onUserSelected ={onUserSelected} addUserToState={addUserToState}/>} />
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
-
-          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser}/>}/>
+          <Route path="/about" element={< About />}/>
+          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>}/>
 
           <Route path="/comment" element={< CommentContainer users={users} selectedUser={selectedUser} editUser={editUser} addNewUser={addNewUser} />}/>
 
