@@ -15,9 +15,10 @@ const userRepo = {
     },
 
     async deleteUserByID(id){
-        fetch(`http://localhost:9000/user/delete/${id}`, {
+        const response = fetch(`http://localhost:9000/user/delete/${id}`, {
             method:"DELETE"
         })
+        return await response.json()
 
     },
 
