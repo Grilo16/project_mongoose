@@ -137,7 +137,7 @@ const addUserToState = (user) => {
     <button onClick={clearDb}>Clear Db</button>
       <Router>
         <Routes>
-          <Route path="/" element={< Home users ={users} onUserSelected ={onUserSelected}/>} />
+          <Route path="/" element={< Home users ={users} onUserSelected ={onUserSelected} addUserToState={addUserToState}/>} />
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
           <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>}/>
