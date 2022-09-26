@@ -11,8 +11,8 @@ const LeaderBoard = ({users}) => {
 
         return (
                 <>
-                
-                <table >
+                <div className='table-wrapper'>
+                <table>
                     <tr>
                         <th>Name</th>
                         <th>Score</th>
@@ -21,6 +21,7 @@ const LeaderBoard = ({users}) => {
                     <td>{leaderList}</td>
                     </tr>
                 </table>
+                </div>
                 </>
 
     )

@@ -10,7 +10,6 @@ import OrgansContainer from './containers/OrganContainer';
 import CommentContainer from "./containers/CommentContainer";
 import organRepo from "./repositories/organ_repository"
 import { getComments ,deleteComments } from "./Comment_services/Comment_services";
-import LeaderBoard from "./components/HomeComponents/LeaderBoard";
 
 import './App.css';
 
@@ -130,10 +129,10 @@ const deleteComment = (id) => {
 
   return (
     <div className="App" id="outer-container">
-    <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
     <button onClick={seeder}>Seed db</button>
     <button onClick={clearDb}>Clear Db</button>
       <Router>
+      <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <Routes>
           <Route path="/" element={< Home users={users}/>} />
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>

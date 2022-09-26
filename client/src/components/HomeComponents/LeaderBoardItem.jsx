@@ -6,7 +6,6 @@ const LeaderBoardItem = ({user}) => {
     return (
 
         <div>
-        
             <tr>
                 <td>{user.guestName}</td>
                 <td>{user.quizScore}</td>
