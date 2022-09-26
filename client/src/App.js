@@ -75,6 +75,7 @@ const clearDb = ()=>{
 const navPages = [
   {pageName: "Home", pageLink: "/"},
   {pageName: "Organs", pageLink: "/organs"},
+  {pageName: "Chemistry", pageLink: "/chemistry"},
   {pageName: "Quizes", pageLink: "/quizzes"},
   {pageName: "Comment", pageLink: "/comment"},
   {pageName: "About", pageLink: "/about"},
@@ -126,6 +127,7 @@ useEffect(()=>{
 
           <Route path="/" element={< Home users={users} onUserSelected={showUser}  setSelectedUser={setSelectedUser} addNewUser={addNewUser}/>}/>
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
+          <Route path="/chemistry" element={< About />}/>
           <Route path="/about" element={< About />}/>
           <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={showUser} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>}/>
 
