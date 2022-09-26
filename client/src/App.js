@@ -72,7 +72,7 @@ const clearDb = ()=>{
 const initialUsers = [{guestName: "Katie", guestComment: "", quizScore : 0}, {guestName : "Mike", guestComment: "", quizScore : 0}]
 
 const [users, setUsers] = useState(initialUsers)
-const [selectedUser, setSelectedUser] = useState()
+const [selectedUser, setSelectedUser] = useState('')
 
 const [organs, setOrgans] = useState([])
 const [organToShow, setOrganToShow] = useState('')
@@ -124,6 +124,12 @@ const deleteComment = (id) => {
   })
 }
 
+const addUserToState = (user) => {
+  let temp = users.map((u) => u);
+  temp.push(user);
+  setUsers(temp);
+};
+
   return (
     <div className="App" id="outer-container">
     <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
@@ -131,10 +137,10 @@ const deleteComment = (id) => {
     <button onClick={clearDb}>Clear Db</button>
       <Router>
         <Routes>
-          <Route path="/" element={< Home/>} />
+          <Route path="/" element={< Home users ={users} onUserSelected ={onUserSelected}/>} />
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
-          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser}/>}/>
+          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>}/>
 
           <Route path="/comment" element={< CommentContainer comment={comments} deleteComment={deleteComment} addComment={addComments}  />}/>
 

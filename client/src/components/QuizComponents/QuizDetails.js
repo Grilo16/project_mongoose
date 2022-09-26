@@ -1,10 +1,16 @@
 import QuizQuestion from "./QuizQuestion"
 import { useState } from "react"
-const QuizDetails = ({organToShow}) => {
+const QuizDetails = ({organToShow, selectedUser, setSelectedUser}) => {
 
     const [correctAnswers, setCorrectAnswers] = useState([])
 
     const score = correctAnswers.length
+
+    const saveScore = () => {
+        const copyUserToUpdateScore = {...selectedUser}
+        copyUserToUpdateScore.quizScore = score
+        setSelectedUser(copyUserToUpdateScore)
+    }
 
     if(!organToShow) return "Select an organ to take the quiz!"
 
@@ -26,6 +32,7 @@ const QuizDetails = ({organToShow}) => {
         <h2>Take the {organToShow[0].name} quiz!</h2>
         <p>You have answered {score} questions correctly!</p>
         <ul className='quizdetail'>{quizQuestionsToShow}</ul>
+        <button onClick={saveScore}>Save score</button>
         </div>
         :
         <div className='quizdetailheader'>
