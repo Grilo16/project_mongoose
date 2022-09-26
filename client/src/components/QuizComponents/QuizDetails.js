@@ -16,7 +16,7 @@ const QuizDetails = ({organToShow, selectedUser, setSelectedUser, findUserByID, 
         const userByID = findUserByID(copyUserToUpdateScore._id)
         //call edit user in db
         editUser(userByID[0]._id, {quizScore : score})
-        //update the user state - automatically done?
+        //update the user state - automatically done
     }
 
     if(!organToShow) return "Select an organ to take the quiz!"

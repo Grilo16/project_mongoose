@@ -15,12 +15,20 @@ const QuizQuestion = ({eachQuestion, eachAnswer, correctAnswers, setCorrectAnswe
         if (submittedAnswer.toLowerCase() === eachAnswer) {
             setIsAnswerCorrect("Well done - answer is correct!")
             const copyCorrectAnswers = [...correctAnswers]
-            copyCorrectAnswers.push(submittedAnswer)
-            setCorrectAnswers(copyCorrectAnswers)
-            setAnswer('')
+            const answerAlreadySubmitted = correctAnswers.find(answers => submittedAnswer)
+            if (!answerAlreadySubmitted) {
+                copyCorrectAnswers.push(submittedAnswer)
+                setCorrectAnswers(copyCorrectAnswers)
+            }
+            else {
+                setIsAnswerCorrect("You have already completed this question, please try a new question!")
+            }
+
+            
         } else {
             setIsAnswerCorrect("That answer is incorrect - please try again!")
             }
+        setAnswer('')
         
     }
 
@@ -28,7 +36,7 @@ const QuizQuestion = ({eachQuestion, eachAnswer, correctAnswers, setCorrectAnswe
     <>
     <li className='questionandanswer'>{eachQuestion}
     <form className="" onSubmit={checkAnswer}>
-    <input className = 'inputanswer' type="text" id="answer" onChange={handleAnswerChange} placeholder="Your answer here..." required/>
+    <input className = 'inputanswer' type="text" id="answer" value ={answer} onChange={handleAnswerChange} placeholder="Your answer here..." required/>
     <div >
     <input className = 'submitbutton' type="submit" value="Submit Answer" id="answer"/>  
     </div>

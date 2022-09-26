@@ -7,7 +7,7 @@ const AddUser = ({addNewUser})=>{
 
     const handleAddUser = (e)=>{
         e.preventDefault()
-        const user = {guestName: userName, guestComment: "", quizScore: 0}
+        const user = {guestName: userName, guestComments: [], quizScore: 0}
         addNewUser(user)
     };
 

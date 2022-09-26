@@ -10,6 +10,7 @@ import OrgansContainer from './containers/OrganContainer';
 import CommentContainer from "./containers/CommentContainer";
 import organRepo from "./repositories/organ_repository"
 import userRepo from "./repositories/user_repository"
+import commentRepo from "./repositories/comment_repository";
 
 
 import './App.css';
@@ -40,11 +41,11 @@ let listOfOrgans = [
     url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Diagram_of_the_human_heart_%28cropped%29.svg/611px-Diagram_of_the_human_heart_%28cropped%29.svg.png',
     id: 2, //will be provided by database
     quiz: [
-      {id : 1, question : "Which circuit does the right side of the heart pump blood through?", answer:"Pulmonary circuit"},
-      {id : 2, question : "Which circuit does the left side of the heart pump blood through?", answer:"systemic circuit"},
-      {id : 3, question : "Which valve is on the right hand side?", answer:"tricuspid"},
-      {id : 4, question : "How many flaps does this valve have?", answer:"three"},
-      {id : 5, question : "Which valve do both sides have in common?", answer:"semi lunar valve"}
+      {id : 6, question : "Which circuit does the right side of the heart pump blood through?", answer:"Pulmonary circuit"},
+      {id : 7, question : "Which circuit does the left side of the heart pump blood through?", answer:"systemic circuit"},
+      {id : 8, question : "Which valve is on the right hand side?", answer:"tricuspid"},
+      {id : 9, question : "How many flaps does this valve have?", answer:"three"},
+      {id : 10, question : "Which valve do both sides have in common?", answer:"semi lunar valve"}
     ],
   },
 
@@ -54,11 +55,11 @@ let listOfOrgans = [
     url: 'https://media.istockphoto.com/vectors/human-liver-anatomy-vector-id479374171?k=20&m=479374171&s=612x612&w=0&h=ERpbOKjo4j_UG9_UoEZuBLuEU4uKBHF_24ui8WwX1jQ=',
     id: 3, //will be provided by database
     quiz: [
-      {id : 1, question : "Does the liver secrete any enzymes?", answer:"No"},
-      {id : 2, question : "What does the liver produce?", answer:"bile"},
-      {id : 3, question : "What is the advantage of breaking lipids into tiny droplets?", answer:"larger surface area"},
-      {id : 4, question : "Is sodium hydrogencardonate an acid or alkali?", answer:"alkali"},
-      {id : 5, question : "What does sodium hydrogencardonate neutralise? ", answer:"stomach acid"}
+      {id : 11, question : "Does the liver secrete any enzymes?", answer:"no"},
+      {id : 12, question : "What does the liver produce?", answer:"bile"},
+      {id : 13, question : "What is the advantage of breaking lipids into tiny droplets?", answer:"larger surface area"},
+      {id : 14, question : "Is sodium hydrogencardonate an acid or alkali?", answer:"alkali"},
+      {id : 15, question : "What does sodium hydrogencardonate neutralise? ", answer:"stomach acid"}
     ],
   },
 ]
@@ -105,6 +106,10 @@ const editUser = (id, patchObject)=>{
   .then(setUsers)
 };
 
+const addCommentToCommentDb = (commentObject)=>{
+  commentRepo.addCommentToDb(commentObject)
+}
+
 const findUserByID = function(userID){
   const userByID = users.filter((user) => user._id == userID)
   return userByID
@@ -130,7 +135,7 @@ useEffect(()=>{
           <Route path="/about" element={< About />}/>
           <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={showUser} selectedUser={selectedUser} setSelectedUser={setSelectedUser} findUserByID={findUserByID} editUser={editUser}/>}/>
 
-          <Route path="/comment" element={< CommentContainer users={users} selectedUser={selectedUser} editUser={editUser} addNewUser={addNewUser} />}/>
+          <Route path="/comment" element={< CommentContainer users={users} selectedUser={selectedUser} editUser={editUser} addNewUser={addNewUser} addCommentToCommentDb={addCommentToCommentDb} />}/>
 
 
           <Route path="/about" element={< About />}/>
