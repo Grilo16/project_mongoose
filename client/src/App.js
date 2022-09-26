@@ -17,6 +17,54 @@ import './App.css';
 
 function App() {
 
+  const organFacts = [
+    
+    {
+      id: "1",
+      organName: "Brain",
+      funFact: "The brain stem connects the brain to the spinal cord. It is also responsible for all of the things you don't normally think about (like your heart beating, breathing, and digesting food)"
+    },
+    {
+      id: "2",
+      organName: "Brain",
+      funFact: "Most nerves in your body connect to the spinal cord, but there are 12 nerves that come from the brain itself. These control some of the most important functions in your body, including vision, smell, facial movement, and heart rate."
+    },
+    {
+      id: "3",
+      organName: "Brain",
+      funFact: "The brain is split into two halves; each half controls the OPPOSITE side of the body."
+    },
+    {
+      id: "4",
+      organName: "Liver",
+      funFact: "Sometimes people think of cholesterol as a bad thing, but cholesterol is important for building cells, and making certain chemicals called hormones. Hormones are like messengers in your body, and without them the different parts of your body wouldn't be able to talk to each other very well."
+    },
+    {
+      id: "5",
+      organName: "Liver",
+      funFact: "Bilirubin, a chemical that our bodies make and our liver makes safe, is also filtered by our kidneys, which is what gives our urine the yellow color."
+    },
+    {
+      id: "6",
+      organName: "Liver",
+      funFact: "The liver stores excess sugars that you eat, or that are in your blood, in the form of a chemical called glycogen. Glycogen absorbs nearly 6 times its weight in water, so your liver is also important for water storage. When your body needs more sugars (like between meals), your liver breaks down the glycogen into glucose, which the rest of your body uses for fuel. The liver does this for the rest of your body, as the liver itself can't use glucose for energy."
+    },
+    {
+      id: "7",
+      organName: "Heart",
+      funFact: "There are four special valves in the human heart. These valves only allow blood to go one way, so when the heart squeezes the blood out, it goes in the right direction."
+    },
+    {
+      id: "8",
+      organName: "Heart",
+      funFact: "Your heart beats 100,000 times a day, 36,500,000 times a year. That's over 1 billion heart beats if you live past the age of 30! Over the course of the expected lifetime, your heart will beat about 2.5 billion times!"
+    },
+    {
+      id: "9",
+      organName: "Heart",
+      funFact: "The right side of your heart pumps blood up into your lungs and into the left side of the heart; the left side of the heart pumps blood out to your entire body."
+    }
+  ]
 
 const seeder = ()=>{
 let listOfOrgans = [
