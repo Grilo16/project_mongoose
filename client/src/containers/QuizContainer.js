@@ -4,7 +4,7 @@ import '../Quiz.css';
 import { useState, useEffect } from "react";
 import UserScoreDetails from "../components/QuizComponents/UserScoreDetails";
 
-const QuizContainer = ({organs, organToShow, showOrgan, users, onUserSelected, selectedUser, setSelectedUser}) => {
+const QuizContainer = ({organs, organToShow, showOrgan, selectedUser, setSelectedUser, findUserByID, editUser}) => {
 
     return (
         <>
@@ -13,7 +13,7 @@ const QuizContainer = ({organs, organToShow, showOrgan, users, onUserSelected, s
         </div>
     <div className="quizcontainer">
     <QuizList organs={organs} showOrgan={showOrgan}/>
-    <QuizDetails organToShow={organToShow} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>
+    <QuizDetails organToShow={organToShow} selectedUser={selectedUser} setSelectedUser={setSelectedUser} findUserByID={findUserByID} editUser={editUser}/>
     </div>
     </>
     

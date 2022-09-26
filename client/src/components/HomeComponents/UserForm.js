@@ -14,7 +14,7 @@ const UserForm = ({addNewUser}) => {
         
         const userObject = {
             guestName: userInput,
-            guestComment: "",
+            guestComments: [],
             quizScore: 0,
         } 
         
@@ -23,11 +23,14 @@ const UserForm = ({addNewUser}) => {
     }
 
     return (
+        <>
         <form className="" onSubmit={handleSubmit}>
         <label htmlFor="guestName">Name:</label>
         <input  onChange={handleUserInput} type="text" id="guestName" value={userInput} required />
         <input type="submit" value="Save New User" id="save"/>
         </form>
+        <div>Once added, please select your name from the dropdown list to be able to save your quiz score and add comments</div>
+        </>
 
     )
 }

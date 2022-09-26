@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const CommentForm = ({ selectedUser, editUser }) => {
+const CommentForm = ({ selectedUser, editUser, addCommentToCommentDb}) => {
       
     const [guestComment, setGuestComment] = useState('')
 
@@ -12,7 +12,10 @@ const CommentForm = ({ selectedUser, editUser }) => {
       const handleSubmit = (e)=>{
         e.preventDefault()        
         const guestId = selectedUser._id
-        const patchObject = {guestComment: guestComment}
+        // addCommentToCommentDb(guestComment)
+        selectedUser.guestComments.push(guestComment)
+        const updatedCommentsList = selectedUser.guestComments
+        const patchObject = {guestComments: updatedCommentsList}
         editUser(guestId, patchObject)
       };
 
@@ -20,7 +23,7 @@ const CommentForm = ({ selectedUser, editUser }) => {
     <>
     <form onSubmit={handleSubmit}>
 
-      <h3>Wellcome {selectedUser.guestName}</h3>
+      <h3>Welcome {selectedUser.guestName}!</h3>
       <p>please leave a comment</p>
 
       <label htmlFor='guestComment'>Comment:</label>
