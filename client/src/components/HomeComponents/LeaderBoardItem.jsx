@@ -5,12 +5,14 @@ const LeaderBoardItem = ({user}) => {
 
     return (
 
-        <div>
-            <tr>
-                <td>{user.guestName}</td>
-                <td>{user.quizScore}</td>
-            </tr>
-        </div>
+            <>
+                <td>
+                    {user.guestName}
+                </td>
+                <td>
+                    {user.quizScore}
+                </td>
+            </>
 
     )
 }

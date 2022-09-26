@@ -11,17 +11,21 @@ const LeaderBoard = ({users}) => {
 
         return (
                 <>
-                <div className='table-wrapper'>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Score</th>
-                    </tr>
-                    <tr>
-                    <td>{leaderList}</td>
-                    </tr>
+                
+                <table className='leaderboard'>
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            {leaderList}
+                        </tr>
+                    </tbody>
                 </table>
-                </div>
+                
                 </>
 
     )
