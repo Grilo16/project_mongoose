@@ -3,16 +3,11 @@ const { postUser } = require("../repositores/user_repository")
 
 const UserForm = ({addUserToState}) => {
 
-    const [formData, setFormData] = useState({
-        guestName : '',
-        guestComments : '',
-        quizScore: 0
-    })
+    const [formData, setFormData] = useState({guestComments : '', quizScore: 0})
 
-    const onChange = (e) =>{
-        const newFormData = Object.assign({}, formData);
-        newFormData[e.target.name] = e.target.value;
-        setFormData(newFormData);
+    const onChange = (e) => {
+        formData[e.target.id] = e.target.value
+        setFormData(formData)
     }
 
     const handleSubmit = (e) => {
