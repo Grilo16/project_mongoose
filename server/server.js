@@ -10,10 +10,21 @@ const createRouter = require("./helpers/create_router.js")
 MongoClient.connect("mongodb://localhost:27017", {useUnifiedTopology: true})
 .then((client) => {
     const db = client.db("projectdb")
-    const collection = db.collection("organs")
-    const route = createRouter(collection)
-    app.use("/", route)
+    const organCollection = db.collection("organs")
+    const userCollection= db.collection("users")
+    const commentCollection = db.collection("comments")
+    
+    const organRoutes = createRouter(organCollection)
+    const userRoutes = createRouter(userCollection)
+    const commentRoutes = createRouter(commentCollection)
+    
+    app.use("/organ", organRoutes)
+    app.use("/user", userRoutes)
+    app.use("/comment", commentRoutes)
 })
+
+
+
 
 
 app.listen(9000, ()=>{

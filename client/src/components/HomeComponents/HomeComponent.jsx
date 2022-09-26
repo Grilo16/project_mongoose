@@ -1,14 +1,19 @@
 import React from 'react'
-import PeriodicTable from '../PeriodicTableComponents/PeriodicTable'
-import elements from "../PeriodicTableComponents/PeriodicTableData"
+import LeaderBoard from './LeaderBoard'
+import UserSelector from './UserSelector'
+import NewUser from './UserForm'
 
 
-const Home = () => {
+const Home = ({users, onUserSelected, setSelectedUser, addNewUser}) => {
 
     return (
         <>
         <h1>Home</h1>
-        <PeriodicTable elements={elements} />
+        <LeaderBoard users={users}/>
+        <div className='userselector'>
+        <UserSelector users = {users} onUserSelected={onUserSelected}/>
+        <NewUser addNewUser={addNewUser} /> 
+        </div>
         </>
     )
 }
