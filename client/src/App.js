@@ -9,7 +9,8 @@ import QuizContainer from './containers/QuizContainer';
 import OrgansContainer from './containers/OrganContainer';
 import CommentContainer from "./containers/CommentContainer";
 import organRepo from "./repositories/organ_repository"
-import { getComments ,deleteComments } from "./Comment_services/Comment_services";
+import userRepo from "./repositories/user_repository"
+
 
 import './App.css';
 
@@ -68,30 +69,8 @@ const clearDb = ()=>{
   organs.map(organ => organRepo.deleteOrganByID(organ._id))
 }
 
-const initialUsers = [
-  {guestName: "Katie", guestComment: "", quizScore : 0}, 
-  {guestName : "Mike", guestComment: "", quizScore : 0}
-]
 
-const [users, setUsers] = useState(initialUsers)
-const [selectedUser, setSelectedUser] = useState()
 
-const [organs, setOrgans] = useState([])
-const [organToShow, setOrganToShow] = useState('')
-
-useEffect(()=>{
-  organRepo.getOrganList()
-  .then(setOrgans)
-}, [])
-
-const onUserSelected = (user) => {
-  setSelectedUser(user)
-}
-
-const showOrgan = function(organID){
-  const organ = organs.filter((organ) => organ.id === organID)
-  setOrganToShow(organ)     
-};
 
 const navPages = [
   {pageName: "Home", pageLink: "/"},
@@ -101,30 +80,38 @@ const navPages = [
   {pageName: "About", pageLink: "/about"},
 ]
 
+const showUser = (user) => {
+  setSelectedUser(user)
+}
 
-const [comments, setComments] = useState([]);
-useEffect(() =>{
-  getComments()
-  .then((data) =>{
-    setComments(data)
-  })
+const showOrgan = function(organID){
+  const organ = organs.filter((organ) => organ.id === organID)
+  setOrganToShow(organ)     
+};
+
+const [users, setUsers] = useState([])
+const [selectedUser, setSelectedUser] = useState({})
+
+const [organs, setOrgans] = useState([])
+const [organToShow, setOrganToShow] = useState("")
+
+const addNewUser = (userObject)=>{
+  userRepo.addUserToDb(userObject)
+  .then(setUsers)
+};
+
+const editUser = (id, patchObject)=>{
+  userRepo.editUserById(id, patchObject)
+  .then(setUsers)
+};
+
+
+useEffect(()=>{
+  organRepo.getOrganList()
+  .then(setOrgans)
+  userRepo.getAllUsers()
+  .then(setUsers)
 }, [])
-
-
-const addComments = (comment) => {
-  let temp = comments.map(comment => comment);
-  temp.push(comment);
-  setComments(temp)
-}
-
-const deleteComment = (id) => {
-  deleteComment(id).then(() => {
-    let temp = comments.map((g) => g)
-    const toDel = comments.map((g) => g._id).indexOf(id)
-    temp.splice(toDel, 1)
-    setComments(temp)
-  })
-}
 
   return (
     <div className="App" id="outer-container">
@@ -133,16 +120,23 @@ const deleteComment = (id) => {
       <Router>
       <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <Routes>
-          <Route path="/" element={< Home users={users}/>} />
+
+
+
+
+          <Route path="/" element={< Home users={users} onUserSelected={showUser}  setSelectedUser={setSelectedUser} addNewUser={addNewUser}/>}/>
           <Route path="/organs" element={<OrgansContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan}/>}/>
           <Route path="/about" element={< About />}/>
-          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={onUserSelected} selectedUser={selectedUser}/>}/>
+          <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={showUser} selectedUser={selectedUser} setSelectedUser={setSelectedUser}/>}/>
 
-          <Route path="/comment" element={< CommentContainer comment={comments} deleteComment={deleteComment} addComment={addComments}  />}/>
+          <Route path="/comment" element={< CommentContainer users={users} selectedUser={selectedUser} editUser={editUser} addNewUser={addNewUser} />}/>
 
 
+          <Route path="/about" element={< About />}/>
+          
           {/* <Route element={<Feedback />} path='/Feedback' /> */}
           
+
         </Routes>
       </Router>
     </div>

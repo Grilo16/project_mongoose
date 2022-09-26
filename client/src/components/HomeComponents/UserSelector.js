@@ -1,4 +1,4 @@
-const QuizUserSelector = ({users, onUserSelected}) => {
+const UserSelector = ({users, onUserSelected}) => {
     if(!users) return null
 
     const handleChange = (e) => {
@@ -18,4 +18,4 @@ const QuizUserSelector = ({users, onUserSelected}) => {
     )
 }
 
-export default QuizUserSelector
+export default UserSelector

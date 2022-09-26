@@ -1,18 +1,20 @@
 import CommentCard from "./CommentCard"
 
-const CommentGrid = ({ comments, deleteComment }) => {
-  if (!comments) return <h2>Loading, please hang around whilst we fetch all your amazing comments</h2>
-  const CommentList = comments.map((comment) => {
-    return (
-      <CommentCard
-        comment={comment}
-        key={comment._id}
-        deleteComment={deleteComment}
-      />
-    )
-  })
+const CommentGrid = ({users})=>{
 
-  return <>{CommentList}</>
+  const comments = users.map((user)=>{
+    return (
+    <CommentCard user={user}/>
+    )
+})
+
+
+  return (
+    <>
+      {comments}
+    </>
+
+      )
 }
 
 export default CommentGrid
