@@ -12,8 +12,8 @@ const Home = ({users, onUserSelected, setSelectedUser, addNewUser , quote}) => {
         <RandomQuote />
         <LeaderBoard users={users} />
         <div className='userselector'>
-          <UserSelector users={users} onUserSelected={onUserSelected} />
-          <NewUser addNewUser={addNewUser} />
+            <NewUser addNewUser={addNewUser} />
+            <UserSelector users={users} onUserSelected={onUserSelected} />
         </div>
       </>
     )

@@ -166,7 +166,7 @@ const deleteCommentFromUserList = (comment) => {
   console.log(commentIndex)
   copyOfUserComments.splice(commentIndex,1)
   // console.log(newComments)
-  editUser(selectedUser._id, {guestComments : [copyOfUserComments]})
+  editUser(selectedUser._id, {guestComments : copyOfUserComments})
 }
 
 const findUserByID = function(userID){

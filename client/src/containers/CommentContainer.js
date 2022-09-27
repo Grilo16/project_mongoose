@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import AddUser from "../components/CommentComponents/AddUser";
 import CommentForm from "../components/CommentComponents/CommentForm";
 import CommentGrid from "../components/CommentComponents/CommentGrid";
 import Filter from "../components/CommentComponents/Filter";
@@ -30,7 +29,6 @@ const CommentContainer = ({users, selectedUser, editUser, addNewUser, addComment
     <>
     <div>
       <h1>Comments here please!</h1>
-      <AddUser addNewUser={addNewUser}/>
       <hr/>
       <CommentForm editUser={editUser} selectedUser={selectedUser} addCommentToCommentDb={addCommentToCommentDb} />
       <hr/>

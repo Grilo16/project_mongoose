@@ -12,7 +12,7 @@ const UserSelector = ({users, onUserSelected}) => {
 
     return (
         <select defaultValue="" onChange={handleChange}>
-            <option value = "">Select your name or enter name below if you are a new user</option>
+            <option value = "">Please select your name</option>
             {userOptions}
         </select>
     )
