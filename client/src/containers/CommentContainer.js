@@ -10,7 +10,7 @@ const CommentContainer = ({users, selectedUser, editUser, addNewUser, addComment
   const [filteredComments, setFilteredComments] = useState([]);
 
   useEffect(() => {
-    fetch('localhost:27017')
+    fetch('http://localhost:9000/comment/all')
     .then(res => res.json())
     .then((comments) => {
       setComments(comments)
@@ -34,7 +34,7 @@ const CommentContainer = ({users, selectedUser, editUser, addNewUser, addComment
       <hr/>
       <CommentForm editUser={editUser} selectedUser={selectedUser} addCommentToCommentDb={addCommentToCommentDb} />
       <hr/>
-      <CommentGrid users={users} deleteCommentByID={deleteCommentByID} />
+      <CommentGrid users={users} deleteCommentByID={deleteCommentByID} comments={filteredComments} />
       <hr/>
       <Filter handleChange={filter}/>
     </div>
