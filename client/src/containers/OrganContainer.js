@@ -5,8 +5,10 @@ import OrgansGrid from "../components/OrganComponents/OrgansGrid"
 const OrganContainer = ({ organs, organToShow, showOrgan }) => {
   return (
     <>
-    <h1>Organ Information</h1>
+    <div className='organcontainer'>
+    <h2>Let's learn about organs!</h2>
       <OrgansGrid organToShow={organToShow} organs={organs} showOrgan={showOrgan}/>
+    </div>
     </>
   )
 }

@@ -20,13 +20,14 @@ const UserSelector = ({ users, onUserSelected, selectedUser }) => {
 
   return (
     <>
+    <p><b>Existing users</b> please select from the dropdown : </p>
       <select defaultValue='' onChange={handleChange}>
         <option value=''>Please select your name</option>
         {userOptions}
       </select>
 
       <Popup
-        trigger={<button id='button'>Button to be styled</button>}
+        trigger={<button id='button'>Button to be styled with an image that looks like it is saying the pop up</button>}
         position='right center'
       >
         <div>User has changed to {selectedUser.guestName}</div>

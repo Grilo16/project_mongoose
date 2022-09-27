@@ -12,9 +12,7 @@ import organRepo from "./repositories/organ_repository"
 import userRepo from "./repositories/user_repository"
 import commentRepo from "./repositories/comment_repository";
 
-
 import './App.css';
-
 
 function App() {
 
@@ -184,8 +182,8 @@ useEffect(()=>{
 
   return (
     <div className="App" id="outer-container">
-    <button onClick={seeder}>Seed db</button>
-    <button onClick={clearDb}>Clear Db</button>
+    {/* <button onClick={seeder}>Seed db</button> */}
+    {/* <button onClick={clearDb}>Clear Db</button> */}
       <Router>
       <NavBar navPages={navPages} pageWrapId={'page-wrap'} outerContainerId={'outer-container'}/>
         <Routes>
