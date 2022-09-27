@@ -47,4 +47,12 @@
   }
 }
 
+/* pretty sure th above is going to be deleted */
+
+form input {
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+	display: block;
+}
 
