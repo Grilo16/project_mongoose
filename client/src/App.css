@@ -56,3 +56,10 @@ form input {
 	display: block;
 }
 
+.hiddenbutton {
+  display: none
+}
+
+.popupmessage {
+  justify-items: center;
+}

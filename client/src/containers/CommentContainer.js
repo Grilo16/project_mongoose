@@ -30,12 +30,14 @@ const CommentContainer = ({users, selectedUser, editUser, addNewUser, addComment
     <div>
       <h1>Comments here please!</h1>
       <hr/>
+      
       <CommentForm editUser={editUser} selectedUser={selectedUser} addCommentToCommentDb={addCommentToCommentDb} />
       <hr/>
+      <Filter handleChange={filter}/>
 
       <CommentGrid users={users} deleteCommentFromUserList={deleteCommentFromUserList} comments={filteredComments} />
       <hr/>
-      <Filter handleChange={filter}/>
+      
 
     </div>
     </>

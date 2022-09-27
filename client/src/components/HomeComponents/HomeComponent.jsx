@@ -4,7 +4,7 @@ import UserSelector from './UserSelector'
 import NewUser from './UserForm'
 import RandomQuote from './RandomQuote'
 
-const Home = ({users, onUserSelected, setSelectedUser, addNewUser , quote}) => {
+const Home = ({users, onUserSelected, setSelectedUser, addNewUser , quote, selectedUser}) => {
 
     return (
       <>
@@ -13,7 +13,7 @@ const Home = ({users, onUserSelected, setSelectedUser, addNewUser , quote}) => {
         <LeaderBoard users={users} />
         <div className='userselector'>
             <NewUser addNewUser={addNewUser} />
-            <UserSelector users={users} onUserSelected={onUserSelected} />
+            <UserSelector users={users} onUserSelected={onUserSelected} selectedUser={selectedUser} />
         </div>
       </>
     )
