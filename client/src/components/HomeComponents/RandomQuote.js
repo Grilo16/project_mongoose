@@ -7,7 +7,7 @@ import React, {useState, useEffect} from 'react'
 function RandomQuote() {
 
 
-const [randomAPIquote, setRandomAPIquote] = useState({})
+const [randomAPIquote, setRandomAPIquote] = useState([])
 
 useEffect(() => {
     getQuote();
@@ -34,7 +34,7 @@ useEffect(() => {
   return (
     <>
     
-      <div class='display'>
+      <div className='display'>
         <p id='quote'>
             {randomAPIquote}
         </p>
