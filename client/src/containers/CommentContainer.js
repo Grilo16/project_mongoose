@@ -2,7 +2,7 @@ import AddUser from "../components/CommentComponents/AddUser";
 import CommentForm from "../components/CommentComponents/CommentForm";
 import CommentGrid from "../components/CommentComponents/CommentGrid";
 
-const CommentContainer = ({users, selectedUser, editUser, addNewUser, addCommentToCommentDb, deleteCommentByID }) => {
+const CommentContainer = ({users, selectedUser, editUser, addNewUser, addCommentToCommentDb, deleteCommentFromUserList }) => {
 
   return (
     <>
@@ -12,7 +12,7 @@ const CommentContainer = ({users, selectedUser, editUser, addNewUser, addComment
       <hr/>
       <CommentForm editUser={editUser} selectedUser={selectedUser} addCommentToCommentDb={addCommentToCommentDb} />
       <hr/>
-      <CommentGrid users={users} deleteCommentByID={deleteCommentByID} />
+      <CommentGrid users={users} deleteCommentFromUserList={deleteCommentFromUserList} />
     </div>
     </>
   );
