@@ -158,6 +158,17 @@ const addCommentToCommentDb = (commentObject)=>{
   commentRepo.addCommentToDb(commentObject)
 }
 
+const deleteCommentFromUserList = (comment) => {
+  const copyOfSelectedUser = {...selectedUser}
+  const copyOfUserComments = copyOfSelectedUser.guestComments
+  console.log(copyOfUserComments)
+  const commentIndex = copyOfUserComments.indexOf(comment)
+  console.log(commentIndex)
+  copyOfUserComments.splice(commentIndex,1)
+  // console.log(newComments)
+  editUser(selectedUser._id, {guestComments : [copyOfUserComments]})
+}
+
 const findUserByID = function(userID){
   const userByID = users.filter((user) => user._id == userID)
   return userByID
@@ -183,7 +194,7 @@ useEffect(()=>{
           <Route path="/about" element={< About />}/>
           <Route path='/quizzes' element={<QuizContainer organs={organs} organToShow={organToShow} showOrgan={showOrgan} users={users} setUsers={setUsers} onUserSelected={showUser} selectedUser={selectedUser} setSelectedUser={setSelectedUser} findUserByID={findUserByID} editUser={editUser}/>}/>
 
-          <Route path="/comment" element={< CommentContainer users={users} selectedUser={selectedUser} editUser={editUser} addNewUser={addNewUser} addCommentToCommentDb={addCommentToCommentDb} />}/>
+          <Route path="/comment" element={< CommentContainer users={users} selectedUser={selectedUser} editUser={editUser} addNewUser={addNewUser} addCommentToCommentDb={addCommentToCommentDb} deleteCommentFromUserList={deleteCommentFromUserList}/>}/>
 
 
           <Route path="/about" element={< About />}/>

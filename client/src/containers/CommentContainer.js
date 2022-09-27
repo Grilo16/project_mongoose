@@ -4,7 +4,7 @@ import CommentForm from "../components/CommentComponents/CommentForm";
 import CommentGrid from "../components/CommentComponents/CommentGrid";
 import Filter from "../components/CommentComponents/Filter";
 
-const CommentContainer = ({users, selectedUser, editUser, addNewUser, addCommentToCommentDb, deleteCommentByID }) => {
+const CommentContainer = ({users, selectedUser, editUser, addNewUser, addCommentToCommentDb, deleteCommentFromUserList }) => {
 
   const [comments, setComments] = useState([]);
   const [filteredComments, setFilteredComments] = useState([]);
@@ -34,9 +34,11 @@ const CommentContainer = ({users, selectedUser, editUser, addNewUser, addComment
       <hr/>
       <CommentForm editUser={editUser} selectedUser={selectedUser} addCommentToCommentDb={addCommentToCommentDb} />
       <hr/>
-      <CommentGrid users={users} deleteCommentByID={deleteCommentByID} comments={filteredComments} />
+
+      <CommentGrid users={users} deleteCommentFromUserList={deleteCommentFromUserList} comments={filteredComments} />
       <hr/>
       <Filter handleChange={filter}/>
+
     </div>
     </>
   );
