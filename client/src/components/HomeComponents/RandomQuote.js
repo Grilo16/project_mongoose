@@ -1,32 +1,46 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+
+
+
+
 
 function RandomQuote() {
-  let quote = document.getElementById('quote')
-  let author = document.getElementById('author')
-  let btn = document.getElementById('btn')
+
+
+const [randomAPIquote, setRandomAPIquote] = useState({})
+
+useEffect(() => {
+    getQuote();
+},[])
 
   const url = 'https://api.quotable.io/random'
+
+
 
   let getQuote = () => {
     fetch(url)
       .then((data) => data.json())
       .then((item) => {
-        quote.innerText = item.content
-        author.innerText = item.author
+        console.log(item)
+        setRandomAPIquote(item.content)
+    
+            
+    
       })
-  }
-  window.addEventListener('load', getQuote)
-  btn.addEventListener('click', getQuote)
+            
+    }
+
 
   return (
     <>
+    
       <div class='display'>
         <p id='quote'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
+            {randomAPIquote}
         </p>
 
-        <h3 id='author'>Lorem, ipsum.</h3>
-        <button id='btn'>Get Quote</button>
+        <h3 id='author'></h3>
+        <button id='btn' onClick= {getQuote}>Button</button>
       </div>
     </>
   )
