@@ -1,6 +1,6 @@
 import CommentCard from "./CommentCard"
 
-const CommentGrid = ({users, deleteCommentFromUserList})=>{
+const CommentGrid = ({users, deleteCommentFromUserList, filteredComments})=>{
 
   const comments = users.map((user)=>{
     return (
@@ -11,7 +11,10 @@ const CommentGrid = ({users, deleteCommentFromUserList})=>{
 
   return (
     <>
-      {comments}
+    <div>Filtered comments : {filteredComments}</div>
+    <div>All comments : {comments}</div>
+      
+      
     </>
 
       )
