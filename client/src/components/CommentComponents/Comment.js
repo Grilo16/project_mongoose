@@ -1,8 +1,8 @@
-const Comment = ({comment, deleteCommentByID}) => {
+const Comment = ({comment, deleteCommentFromUserList}) => {
 
     return <>
     <li>{comment}</li>
-    { <button /*onClick={() => deleteCommentByID(comment._id)}*/>Delete</button> }
+    { <button onClick={() => deleteCommentFromUserList(comment)}>Delete</button> }
     </>
 }
 

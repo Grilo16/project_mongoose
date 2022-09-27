@@ -1,10 +1,10 @@
 import CommentCard from "./CommentCard"
 
-const CommentGrid = ({users, deleteCommentByID})=>{
+const CommentGrid = ({users, deleteCommentFromUserList})=>{
 
   const comments = users.map((user)=>{
     return (
-    <CommentCard user={user} key = {user._id} deleteCommentByID={deleteCommentByID}/>
+    <CommentCard user={user} key = {user._id} deleteCommentFromUserList={deleteCommentFromUserList}/>
     )
 })
 
