@@ -9,7 +9,7 @@ const Home = ({users, onUserSelected, setSelectedUser, addNewUser , quote}) => {
     return (
       <>
         <h1>Home</h1>
-        <RandomQuote quote={quote}/>
+        <RandomQuote />
         <LeaderBoard users={users} />
         <div className='userselector'>
           <UserSelector users={users} onUserSelected={onUserSelected} />
