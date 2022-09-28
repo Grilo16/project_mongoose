@@ -5,7 +5,7 @@ import Popup from 'reactjs-popup'
 const OrganCard = ({ organ }) => {
   return (
     <>
-      <p>Name: {organ.name}</p>
+      <p>{organ.name}</p>
       <p>
         <img src={organ.url} width='150' height='150'></img>
       </p>

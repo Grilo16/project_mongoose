@@ -1,0 +1,40 @@
+.homecontainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+.sidebyside {
+  display: flex;
+  flex-direction: row;
+}
+
+.userselector {
+  width:700px;
+  margin: 20px;
+  margin-right: 150px;
+  padding: 5px;
+  align-items: center;
+}
+
+.leaderboard {
+  margin: 20px;
+  margin-left: 150px;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 5%;
+}
+
+.leaderboard th {
+  width: 50px
+}
+
+b {
+  color: greenyellow
+}
+
+#quote {
+  font-style: italic;
+  font-size: 18pt;
+  color:rgb(10, 247, 247)
+}

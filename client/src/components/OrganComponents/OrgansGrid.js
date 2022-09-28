@@ -1,5 +1,5 @@
 import OrganCard from "./OrganCard.js"
-
+import './organ.css'
 
 const OrgansGrid = ({ organs, showOrgan }) => {
     if (!organs) return <h2>Please wait for fresh Organs, thanks!</h2>

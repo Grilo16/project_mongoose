@@ -41,7 +41,7 @@ const CommentContainer = ({users, selectedUser, editUser, addNewUser, addComment
   return (
     <>
     <div>
-      <h1>Comments here please!</h1>
+      <h2>Please leave your comments here!</h2>
       <hr/>
       
       <CommentForm editUser={editUser} selectedUser={selectedUser} addCommentToCommentDb={addCommentToCommentDb} />
