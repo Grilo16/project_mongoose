@@ -1,60 +1,55 @@
-import { useEffect, useState } from "react";
-import CommentForm from "../components/CommentComponents/CommentForm";
-import CommentGrid from "../components/CommentComponents/CommentGrid";
-import Filter from "../components/CommentComponents/Filter";
+import { useEffect, useState } from 'react'
+import CommentForm from '../components/CommentComponents/CommentForm'
+import CommentGrid from '../components/CommentComponents/CommentGrid'
+import Filter from '../components/CommentComponents/Filter'
 
-const CommentContainer = ({users, selectedUser, editUser, addNewUser, addCommentToCommentDb, deleteCommentFromUserList }) => {
+const CommentContainer = ({
+  users,
+  selectedUser,
+  editUser,
+  addNewUser,
+  addCommentToCommentDb,
+  deleteCommentFromUserList,
+}) => {
+  const [searchTerm, setSearchTerm] = useState('')
 
-  const [usersWithMatchingComments, setUsersWithMatchingComments] = useState([]);
-  const [searchedUsers, setSearchedUsers] = useState([]);
+  const filteredUsers = users.map((user) => {
+    const nextUserComments = user.guestComments.filter((comment) =>
+      comment.includes(searchTerm)
+    )
+    return {
+      ...user,
+      guestComments: nextUserComments,
+    }
+  })
 
-  useEffect(() => {
-    fetch('http://localhost:9000/user/all')
-    .then(res => res.json())
-    .then((searchedUsers) => {
-      setSearchedUsers(searchedUsers)
-      setUsersWithMatchingComments(searchedUsers)
-    })
-    // .then((users) => {
-    //   setComments(comments)
-    //   setFilteredComments(comments)
-    // })
-  }, []);
-
-  const filter = (searchTerm) => {
-    const lowerSearch = searchTerm.toLowerCase()
-    console.log(lowerSearch);
-    console.log(searchedUsers);
-    // const newFilteredComments = []
-    const nextFilteredUsers = searchedUsers.map(user => {
-      const nextUserComments = user.guestComments.filter((comment) => comment.includes(lowerSearch)
-        )
-        return {
-          ...user,
-          guestComments: nextUserComments
-        }
-      })
-      console.log(nextFilteredUsers);
-      setUsersWithMatchingComments(nextFilteredUsers)
+  const updateSearchTerm = (searchTerm) => {
+    setSearchTerm(searchTerm.toLowerCase())
   }
 
   return (
     <>
-    <div>
-      <h2>Please leave your comments here!</h2>
-      <hr/>
-      
-      <CommentForm editUser={editUser} selectedUser={selectedUser} addCommentToCommentDb={addCommentToCommentDb} />
-      <hr/>
-      <Filter handleChange={filter}/>
+      <div>
+        <h2>Please leave your comments here!</h2>
+        <hr />
 
-      <CommentGrid users={users} deleteCommentFromUserList={deleteCommentFromUserList} nextFilteredUsers={usersWithMatchingComments} />
-      <hr/>
-      
+        <CommentForm
+          editUser={editUser}
+          selectedUser={selectedUser}
+          addCommentToCommentDb={addCommentToCommentDb}
+        />
+        <hr />
+        <Filter handleChange={updateSearchTerm} />
 
-    </div>
+        <CommentGrid
+          users={users}
+          deleteCommentFromUserList={deleteCommentFromUserList}
+          nextFilteredUsers={filteredUsers}
+        />
+        <hr />
+      </div>
     </>
-  );
+  )
 }
 
 export default CommentContainer

@@ -13,8 +13,8 @@ const CommentForm = ({ selectedUser, editUser, addCommentToCommentDb}) => {
         e.preventDefault()        
         const guestId = selectedUser._id
         // addCommentToCommentDb(guestComment)
-        selectedUser.guestComments.push(guestComment)
-        const updatedCommentsList = selectedUser.guestComments
+        // selectedUser.guestComments.push(guestComment)
+        const updatedCommentsList = [...selectedUser.guestComments, guestComment]
         const patchObject = {guestComments: updatedCommentsList}
         editUser(guestId, patchObject)
         addCommentToCommentDb({guestComments: guestComment})
