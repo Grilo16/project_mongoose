@@ -9,6 +9,7 @@ const OrganContainer = ({ organs, organToShow, showOrgan }) => {
     <h2>Let's learn about organs!</h2>
       <OrgansGrid organToShow={organToShow} organs={organs} showOrgan={showOrgan}/>
     </div>
+    <div className='linktoorganquiz'>Now take the <a href="http://localhost:3000/quizzes">organ quiz >>> </a></div>
     </>
   )
 }

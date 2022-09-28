@@ -12,3 +12,11 @@ background-size: contain;
 .organcontainer p {
     color: black
 }
+
+.linktoorganquiz {
+    font-size: 20px;
+}
+
+.linktoorganquiz>a {
+    color: white
+}
