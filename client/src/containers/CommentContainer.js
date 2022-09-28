@@ -15,7 +15,7 @@ const CommentContainer = ({
 
   const filteredUsers = users.map((user) => {
     const nextUserComments = user.guestComments.filter((comment) =>
-      comment.includes(searchTerm)
+      comment.toLowerCase().includes(searchTerm)
     )
     return {
       ...user,

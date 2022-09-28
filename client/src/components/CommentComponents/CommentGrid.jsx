@@ -16,7 +16,8 @@ const CommentGrid = ({users, deleteCommentFromUserList, nextFilteredUsers})=>{
 
   return (
     <>
-    <div>Comments : {filteredComments}</div>
+    <h2>Comments:</h2>
+    <div>{filteredComments}</div>
     {/* <div>All comments : {comments}</div> */}
       
       
