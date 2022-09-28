@@ -5,37 +5,50 @@ import Filter from "../components/CommentComponents/Filter";
 
 const CommentContainer = ({users, selectedUser, editUser, addNewUser, addCommentToCommentDb, deleteCommentFromUserList }) => {
 
-  const [comments, setComments] = useState([]);
-  const [filteredComments, setFilteredComments] = useState([]);
+  const [usersWithMatchingComments, setUsersWithMatchingComments] = useState([]);
+  const [searchedUsers, setSearchedUsers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:9000/comment/all')
+    fetch('http://localhost:9000/user/all')
     .then(res => res.json())
-    .then((comments) => {
-      setComments(comments)
-      setFilteredComments(comments)
+    .then((searchedUsers) => {
+      setSearchedUsers(searchedUsers)
+      setUsersWithMatchingComments(searchedUsers)
     })
+    // .then((users) => {
+    //   setComments(comments)
+    //   setFilteredComments(comments)
+    // })
   }, []);
 
   const filter = (searchTerm) => {
     const lowerSearch = searchTerm.toLowerCase()
-    const filteredComments = comments.filter((comment) => {
-      return comment.guestComment.toLowerCase().indexOf(lowerSearch) > -1;
-    })
-    setFilteredComments(filteredComments)
+    console.log(lowerSearch);
+    console.log(searchedUsers);
+    // const newFilteredComments = []
+    const nextFilteredUsers = searchedUsers.map(user => {
+      const nextUserComments = user.guestComments.filter((comment) => comment.includes(lowerSearch)
+        )
+        return {
+          ...user,
+          guestComments: nextUserComments
+        }
+      })
+      console.log(nextFilteredUsers);
+      setUsersWithMatchingComments(nextFilteredUsers)
   }
 
   return (
     <>
     <div>
-      <h1>Comments here please!</h1>
+      <h2>Please leave your comments here!</h2>
       <hr/>
       
       <CommentForm editUser={editUser} selectedUser={selectedUser} addCommentToCommentDb={addCommentToCommentDb} />
       <hr/>
       <Filter handleChange={filter}/>
 
-      <CommentGrid users={users} deleteCommentFromUserList={deleteCommentFromUserList} comments={filteredComments} />
+      <CommentGrid users={users} deleteCommentFromUserList={deleteCommentFromUserList} nextFilteredUsers={usersWithMatchingComments} />
       <hr/>
       
 

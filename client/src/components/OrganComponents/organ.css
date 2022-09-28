@@ -1,0 +1,22 @@
+.organcontainer {
+background-image: url(https://img.freepik.com/free-vector/body-anatomy-concept-illustration_114360-6061.jpg?w=1060&t=st=1664314426~exp=1664315026~hmac=c4af73e016987e61aa134b3217f62a0bcf03a6cc0b0af95285d411e79cdd5a1e);
+background-repeat: no-repeat;
+background-position:center;
+background-size: contain;
+}
+
+.organcontainer h2 {
+    color: black;
+}
+
+.organcontainer p {
+    color: black
+}
+
+.linktoorganquiz {
+    font-size: 20px;
+}
+
+.linktoorganquiz>a {
+    color: white
+}

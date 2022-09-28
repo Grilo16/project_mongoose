@@ -25,10 +25,9 @@ const CommentForm = ({ selectedUser, editUser, addCommentToCommentDb}) => {
     <form onSubmit={handleSubmit}>
 
       <h3>Welcome {selectedUser.guestName}!</h3>
-      <p>please leave a comment</p>
 
-      <label htmlFor='guestComment'>Comment:</label>
-      <input onChange={handleUserInput} type='text' id='guestComment' value={guestComment}  required/>
+      <label htmlFor='guestComment'></label>
+      <input onChange={handleUserInput} type='text' id='guestComment' value={guestComment} placeholder="Tell us your thoughts..." required/>
 
       <input type='submit' value='Save' id='save' />
     </form>
