@@ -7,7 +7,7 @@ const UserSelector = ({ users, onUserSelected, selectedUser }) => {
   const handleChange = (e) => {
     const chosenuser = users[e.target.value]
     onUserSelected(chosenuser)
-    document.getElementById('button').click()
+    document.getElementById('hidden-button').click()
   }
 
   const userOptions = users.map((user, index) => {
@@ -27,7 +27,7 @@ const UserSelector = ({ users, onUserSelected, selectedUser }) => {
       </select>
 
       <Popup
-        trigger={<button id='button'>Button to be styled with an image that looks like it is saying the pop up</button>}
+        trigger={<button id='hidden-button'><img src="https://previews.123rf.com/images/larryrains/larryrains1606/larryrains160600079/57535604-heart-talking.jpg"/></button>}
         position='right center'
       >
         <div>User has changed to {selectedUser.guestName}</div>
