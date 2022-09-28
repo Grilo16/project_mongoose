@@ -38,3 +38,25 @@ b {
   font-size: 18pt;
   color:rgb(10, 247, 247)
 }
+
+#hidden-button {
+  display: inline-block;
+  height: 134px;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  width: 104px;
+}
+
+#hidden-button img {
+  display: block;
+  height: 130px;  
+  width: 100px;
+}
+
+#hidden-button {
+  background-image: url( 'http://thinkingstiff.com/images/matt.jpg' );
+  background-size: 100px 130px;
+  height: 134px;  
+  width: 104px;
+}

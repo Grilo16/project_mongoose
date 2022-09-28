@@ -1,6 +1,6 @@
 import QuizList from "../components/QuizComponents/QuizList"
 import QuizDetails from "../components/QuizComponents/QuizDetails"
-import '../Quiz.css';
+import '../components/QuizComponents/Quiz.css';
 import { useState, useEffect } from "react";
 import UserScoreDetails from "../components/QuizComponents/UserScoreDetails";
 
