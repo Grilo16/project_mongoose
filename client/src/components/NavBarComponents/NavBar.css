@@ -64,7 +64,7 @@
   
   
   .bm-menu {
-    background: #373a47;
+    background: #343744;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
   }
@@ -99,5 +99,8 @@
     color: #ffffff;
   }
 
-  
+  .burger-link {
+    text-decoration: none;
+    color: white;
+  }
 

@@ -8,7 +8,7 @@ function NLink({route}) {
     return (
 
             <button>
-                <Link to={route.pageLink}> {route.pageName} </Link>
+                <Link className='burger-link' to={route.pageLink}> {route.pageName} </Link>
             </button>
 
     )
