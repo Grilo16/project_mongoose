@@ -60,6 +60,8 @@ const QuizDetails = ({
       ) : (
         <div className='quizdetailheader'>
           <h2>Select an organ to take the quiz!</h2>
+  
+          <br></br>
         </div>
       )}
     </div>

@@ -7,10 +7,15 @@ const About = () => {
       <>
         <h1>About Project Mongoose</h1>
         <p>
-          ipsum dsgsdggdsdgsdlgjklksdglksdglskdgskdgsdkglskcskbjskkspdkssdl
-          ls;gs;ldgks;dlgk;sdgks;gk;sdlgks;dgksd;ksd;glsdgks;dgksd;gks;dlk;sldk;sgkds
-          sdglksd;gkdsglksd;gks;dkg;sdgks;dlgksldgkg;k;gkd;skdg;sdgkdsl;gksdgksldg
+        The aim of The Ear-Replaceable Biology App (Code name Projet Mongoose) was to create a full stack learning
+        site from scratch. Since it would be built from the ground up we could decide on the structure and purpose
+        of the app based on user stories and developer vision. It would be scaleable for its features and be designed
+        in such a way that it would be friendly and accesible for the users and contributing future developers.
+        We hope you enjoy, and please feel free to leave comments in our comments page!
         </p>
+        <br></br>
+        <h3>This is a placeholder video</h3>
+        <p>We were going to do a video with us in it, but seeing as we felt like muppets, this sufficed</p>
         <p>
           <iframe
             width='420'
@@ -19,18 +24,24 @@ const About = () => {
           ></iframe>
         </p>
         <br></br>
-        <h2>About us!</h2>
+        {/* <h2>About us!</h2>
         <p>
-          dsgljdsglsdkgsddsmdsgmds.glds;gd;kd;lgksd;lgkdslgkds;gksdlgsd;gkdsl;gkdsglksdd
-          dgsdgmsdgkdsglsd;gkdsg;sdglsdgdsl;gds;glksd;gk;glkegkpdkdnwdgsgkdkgkgskgkgdgkggkg
-          dsgspegokipomwpkpselccjpkhxlfkpkrjwokorkwokwokhw[hwrh
-        </p>
+        
+        </p> */}
         <br></br>
-        <h3>Something else</h3>
+        <h3>Coming soon!</h3>
         <p>
-          ddsgdsgdsgsgkdsmglsdjwiqoeoitpvpsdnvapogjnpoejgpaeogjpeogjpweogjpwoegjepogjpegj
-          egklejgegjewgjwemglwkejglwekgwelkgjewgkjlwegjlwekgjwelkgjwelgkjewlkgjklwejkegjklwegjl
-          egwekjglekgjlewgkegjwekgjlwekgjlwejkgwlegjewklgjwelgkjewgkwelgjewlkgjwekgjkwegkl
+          Here we have set out a list of features that we would have liked to
+          have had or work on in the future. The list is not exhaustive but the
+          general gist is:
+          <ol>
+            <li>User log out (Sorry Alex!)</li>
+            <li>More interactive organs page</li>
+            <li>Other features pages ( Geography , Maths , Coding etc)</li>
+            <li>Search entire application</li>
+            <li>Multiple choice quiz questions</li>
+            
+          </ol>
         </p>
       </>
     )
