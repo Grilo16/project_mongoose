@@ -4,10 +4,10 @@ const CommentCard = ({user, deleteCommentFromUserList}) => {
 
     const listOfComments = (
         
-        user.guestComments.map((comment) => { 
+        user.guestComments.map((comment, indexOfComment) => { 
         return (
 
-        <Comment comment={comment} deleteCommentFromUserList={deleteCommentFromUserList}/>)
+        <Comment key={indexOfComment} user = {user} comment={comment} deleteCommentFromUserList={deleteCommentFromUserList}/>)
         }))
     
       
@@ -16,9 +16,9 @@ const CommentCard = ({user, deleteCommentFromUserList}) => {
       <>
         {listOfComments.length ? (
           <>
-            <p>Name:{user.guestName} </p>
+            {/* <p>Name: {user.guestName} </p> */}
             <div>
-              Comments: <ul>{listOfComments}</ul>
+              <ul>{listOfComments}</ul>
             </div>
           </>
         ) : null}

@@ -34,14 +34,14 @@ const About = () => {
           Here we have set out a list of features that we would have liked to
           have had or work on in the future. The list is not exhaustive but the
           general gist is:
-          <ol>
+          <ul>
             <li>User log out (Sorry Alex!)</li>
             <li>More interactive organs page</li>
             <li>Other features pages ( Geography , Maths , Coding etc)</li>
             <li>Search entire application</li>
             <li>Multiple choice quiz questions</li>
             
-          </ol>
+          </ul>
         </p>
       </>
     )

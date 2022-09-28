@@ -30,9 +30,8 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    padding: 10px
+    padding: 10px;
     
-  
 }
 
 .quizdetailheader {
@@ -40,18 +39,22 @@
 }
 
 .questionandanswer {
-    padding: 5px
+    padding: 5px;
+    
 }
 
 .inputanswer {
-    margin: 5px;
+    margin: auto;
+    margin-bottom: 10px;
     font-family: 'Acme', sans-serif;
+    
 }
 
 .submitbutton {
     color: black;
     background-color: white;
-    margin: 5px;
+    margin: auto;
+    margin-top: 5px;
     font-family: 'Acme', sans-serif;
 }
 

@@ -21,7 +21,7 @@ const NavBar = ({ navPages }) => {
 
     return (
         <>
-        <h3 className='menulabel'>Menu</h3>
+        <h3 className='menulabel'></h3>
         <Menu>
         <nav className='nav-bar'>
         {navLinks}
