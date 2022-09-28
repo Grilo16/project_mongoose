@@ -1,18 +1,23 @@
 import CommentCard from "./CommentCard"
 
-const CommentGrid = ({users, deleteCommentFromUserList, filteredComments})=>{
-
-  const comments = users.map((user)=>{
+const CommentGrid = ({users, deleteCommentFromUserList, nextFilteredUsers})=>{
+  const filteredComments =  nextFilteredUsers.map((user)=>{
     return (
     <CommentCard user={user} key = {user._id} deleteCommentFromUserList={deleteCommentFromUserList}/>
     )
 })
 
+  //   const comments = users.map((user)=>{
+  //     return (
+  //     <CommentCard user={user} key = {user._id} deleteCommentFromUserList={deleteCommentFromUserList}/>
+  //     )
+  // })
+  
 
   return (
     <>
-    <div>Filtered comments : {filteredComments}</div>
-    <div>All comments : {comments}</div>
+    <div>Comments : {filteredComments}</div>
+    {/* <div>All comments : {comments}</div> */}
       
       
     </>
