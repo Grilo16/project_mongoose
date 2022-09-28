@@ -78,7 +78,7 @@ function App() {
         name: 'Brain',
         id: 1, //will be provided by database
         info: 'The brain controls complex behaviour. It is made of billions of interconnected neurones and has different regions that carry out different functions. There are four main areas in the brain: 1. The cerebrum (the outer layer is called the cerebral cortex), which is split into two hemispheres and is highly folded. It controls intelligence, personality, conscious thought and high-level functions, such as language and verbal memory. 2. The cerebellum, which controls balance, co-ordination of movement and muscular activity. 3. The medulla, which controls unconscious activities such as heart rate and breathing rate, 4. The hypothalamus, which is the regulating centre for temperature and water balance within the body.',
-        url: 'https://cutewallpaper.org/21/brain-no-background/Managed-Futures-Brain-Brain-Icon-Transparent-Background-.png',
+
         quiz: [
           {
             id: 1,
@@ -112,7 +112,7 @@ function App() {
       {
         name: 'Heart',
         info: 'The heart is a muscular organ. Its function is to pump blood. The right side pumps blood through the pulmonary circuit, while the left side pumps blood through the systemic circuit. A septum separates the right and left sides. The left side has thicker walls because it needs to put the blood under higher pressure than the right side. In general, blood flows into the heart from a vein, goes into an atrium, then a ventricle, and out through an artery. The heart contains valves to prevent the blood flowing backwards: the right side has a tricuspid valve (a valve with three flaps), the left side has a bicuspid valve (a valve with two flaps). Both sides have semi-lunar valves (at the entrances to the pulmonary artery and aorta).',
-        url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Diagram_of_the_human_heart_%28cropped%29.svg/611px-Diagram_of_the_human_heart_%28cropped%29.svg.png',
+
         id: 2, //will be provided by database
         quiz: [
           {
@@ -144,12 +144,147 @@ function App() {
           },
         ],
       },
+      {
+        name: 'Kidneys',
+        id: 3, //will be provided by database
+        info: 'The brain controls complex behaviour. It is made of billions of interconnected neurones and has different regions that carry out different functions. There are four main areas in the brain: 1. The cerebrum (the outer layer is called the cerebral cortex), which is split into two hemispheres and is highly folded. It controls intelligence, personality, conscious thought and high-level functions, such as language and verbal memory. 2. The cerebellum, which controls balance, co-ordination of movement and muscular activity. 3. The medulla, which controls unconscious activities such as heart rate and breathing rate, 4. The hypothalamus, which is the regulating centre for temperature and water balance within the body.',
 
+        quiz: [
+          {
+            id: 1,
+            question: 'How many areas does the brain have?',
+            answer: 'four',
+          },
+          {
+            id: 2,
+            question:
+              'Which area controls intelligence, personality, conscious thought and high-level functions?',
+            answer: 'cerebrum',
+          },
+          {
+            id: 3,
+            question: 'Which area controls body co-ordination?',
+            answer: 'cerebellum',
+          },
+          {
+            id: 4,
+            question: 'Which area controls unconscious activities?',
+            answer: 'medulla',
+          },
+          {
+            id: 5,
+            question: 'What does the hypothalamus regulate within the body?',
+            answer: 'temperature and water balance',
+          },
+        ],
+      },
+      {
+        name: 'Stomach',
+        id: 4, //will be provided by database
+        info: 'The brain controls complex behaviour. It is made of billions of interconnected neurones and has different regions that carry out different functions. There are four main areas in the brain: 1. The cerebrum (the outer layer is called the cerebral cortex), which is split into two hemispheres and is highly folded. It controls intelligence, personality, conscious thought and high-level functions, such as language and verbal memory. 2. The cerebellum, which controls balance, co-ordination of movement and muscular activity. 3. The medulla, which controls unconscious activities such as heart rate and breathing rate, 4. The hypothalamus, which is the regulating centre for temperature and water balance within the body.',
+
+        quiz: [
+          {
+            id: 1,
+            question: 'How many areas does the brain have?',
+            answer: 'four',
+          },
+          {
+            id: 2,
+            question:
+              'Which area controls intelligence, personality, conscious thought and high-level functions?',
+            answer: 'cerebrum',
+          },
+          {
+            id: 3,
+            question: 'Which area controls body co-ordination?',
+            answer: 'cerebellum',
+          },
+          {
+            id: 4,
+            question: 'Which area controls unconscious activities?',
+            answer: 'medulla',
+          },
+          {
+            id: 5,
+            question: 'What does the hypothalamus regulate within the body?',
+            answer: 'temperature and water balance',
+          },
+        ],
+      },
+      {
+        name: 'Intestines',
+        id: 5, //will be provided by database
+        info: 'The brain controls complex behaviour. It is made of billions of interconnected neurones and has different regions that carry out different functions. There are four main areas in the brain: 1. The cerebrum (the outer layer is called the cerebral cortex), which is split into two hemispheres and is highly folded. It controls intelligence, personality, conscious thought and high-level functions, such as language and verbal memory. 2. The cerebellum, which controls balance, co-ordination of movement and muscular activity. 3. The medulla, which controls unconscious activities such as heart rate and breathing rate, 4. The hypothalamus, which is the regulating centre for temperature and water balance within the body.',
+
+        quiz: [
+          {
+            id: 1,
+            question: 'How many areas does the brain have?',
+            answer: 'four',
+          },
+          {
+            id: 2,
+            question:
+              'Which area controls intelligence, personality, conscious thought and high-level functions?',
+            answer: 'cerebrum',
+          },
+          {
+            id: 3,
+            question: 'Which area controls body co-ordination?',
+            answer: 'cerebellum',
+          },
+          {
+            id: 4,
+            question: 'Which area controls unconscious activities?',
+            answer: 'medulla',
+          },
+          {
+            id: 5,
+            question: 'What does the hypothalamus regulate within the body?',
+            answer: 'temperature and water balance',
+          },
+        ],
+      },
+      {
+        name: 'Gallbladder',
+        id: 6, //will be provided by database
+        info: 'The brain controls complex behaviour. It is made of billions of interconnected neurones and has different regions that carry out different functions. There are four main areas in the brain: 1. The cerebrum (the outer layer is called the cerebral cortex), which is split into two hemispheres and is highly folded. It controls intelligence, personality, conscious thought and high-level functions, such as language and verbal memory. 2. The cerebellum, which controls balance, co-ordination of movement and muscular activity. 3. The medulla, which controls unconscious activities such as heart rate and breathing rate, 4. The hypothalamus, which is the regulating centre for temperature and water balance within the body.',
+
+        quiz: [
+          {
+            id: 1,
+            question: 'How many areas does the brain have?',
+            answer: 'four',
+          },
+          {
+            id: 2,
+            question:
+              'Which area controls intelligence, personality, conscious thought and high-level functions?',
+            answer: 'cerebrum',
+          },
+          {
+            id: 3,
+            question: 'Which area controls body co-ordination?',
+            answer: 'cerebellum',
+          },
+          {
+            id: 4,
+            question: 'Which area controls unconscious activities?',
+            answer: 'medulla',
+          },
+          {
+            id: 5,
+            question: 'What does the hypothalamus regulate within the body?',
+            answer: 'temperature and water balance',
+          },
+        ],
+      },
       {
         name: 'Liver',
         info: 'The liver does not secrete any enzymes, but it plays an important role in digestion, and then processing food molecules that have been absorbed.The liver produces bile. Bile emulsifies lipids, breaking them up physically into tiny droplets. Tiny droplets have a much larger surface area, over which lipases can work, than larger pieces, or drops of lipid. Contains sodium hydrogencarbonate, which is an alkali. It neutralises stomach acid and produces the optimum pH for pancreatic enzymes. Is produced in the liver, but stored and concentrated in the gall bladder.',
-        url: 'https://media.istockphoto.com/vectors/human-liver-anatomy-vector-id479374171?k=20&m=479374171&s=612x612&w=0&h=ERpbOKjo4j_UG9_UoEZuBLuEU4uKBHF_24ui8WwX1jQ=',
-        id: 3, //will be provided by database
+        
+        id: 7, //will be provided by database
         quiz: [
           {
             id: 11,
@@ -172,6 +307,40 @@ function App() {
             id: 15,
             question: 'What does sodium hydrogencardonate neutralise? ',
             answer: 'stomach acid',
+          },
+        ],
+      },
+      {
+        name: 'Lungs',
+        id: 8, //will be provided by database
+        info: 'The brain controls complex behaviour. It is made of billions of interconnected neurones and has different regions that carry out different functions. There are four main areas in the brain: 1. The cerebrum (the outer layer is called the cerebral cortex), which is split into two hemispheres and is highly folded. It controls intelligence, personality, conscious thought and high-level functions, such as language and verbal memory. 2. The cerebellum, which controls balance, co-ordination of movement and muscular activity. 3. The medulla, which controls unconscious activities such as heart rate and breathing rate, 4. The hypothalamus, which is the regulating centre for temperature and water balance within the body.',
+
+        quiz: [
+          {
+            id: 1,
+            question: 'How many areas does the brain have?',
+            answer: 'four',
+          },
+          {
+            id: 2,
+            question:
+              'Which area controls intelligence, personality, conscious thought and high-level functions?',
+            answer: 'cerebrum',
+          },
+          {
+            id: 3,
+            question: 'Which area controls body co-ordination?',
+            answer: 'cerebellum',
+          },
+          {
+            id: 4,
+            question: 'Which area controls unconscious activities?',
+            answer: 'medulla',
+          },
+          {
+            id: 5,
+            question: 'What does the hypothalamus regulate within the body?',
+            answer: 'temperature and water balance',
           },
         ],
       },
@@ -244,8 +413,8 @@ function App() {
 
   return (
     <div className='App' id='outer-container'>
-      {/* <button onClick={seeder}>Seed db</button> */}
-      {/* <button onClick={clearDb}>Clear Db</button> */}
+      {/* <button onClick={seeder}>Seed db</button>
+      <button onClick={clearDb}>Clear Db</button> */}
       <Router>
         <NavBar
           navPages={navPages}

@@ -6,9 +6,7 @@ const OrganCard = ({ organ }) => {
   return (
     <>
       <p>{organ.name}</p>
-      <p>
-        <img src={organ.url} width='150' height='150'></img>
-      </p>
+
      
       <Popup trigger={<button> Teach me!</button>} position='right center'>
         <div>{organ.info}</div>
