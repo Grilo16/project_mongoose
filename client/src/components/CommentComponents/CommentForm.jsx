@@ -18,6 +18,7 @@ const CommentForm = ({ selectedUser, editUser, addCommentToCommentDb}) => {
         const patchObject = {guestComments: updatedCommentsList}
         editUser(guestId, patchObject)
         addCommentToCommentDb({guestComments: guestComment})
+        setGuestComment("")
       };
 
   return (
