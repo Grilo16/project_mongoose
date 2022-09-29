@@ -86,3 +86,12 @@ button {
   filter: brightness(.7);
   transform: scale(.98);
  }
+
+ul {
+  list-style: none;
+}
+
+form input {
+  background-color: rgb(244, 244, 206);
+  border-radius: 5px;
+}

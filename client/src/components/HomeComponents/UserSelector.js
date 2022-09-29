@@ -30,7 +30,7 @@ const UserSelector = ({ users, onUserSelected, selectedUser }) => {
         trigger={<button id='hidden-button'><img src="https://previews.123rf.com/images/larryrains/larryrains1606/larryrains160600079/57535604-heart-talking.jpg"/></button>}
         position='right center'
       >
-        <div>User has changed to {selectedUser.guestName}</div>
+        <div>Hello {selectedUser.guestName}, you handsome devil!</div>
       </Popup>
     </>
   )
