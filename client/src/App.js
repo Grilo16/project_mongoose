@@ -154,7 +154,7 @@ function App() {
           {
             id: 11,
             question: "How many kidneys do you have?",
-            answer: "Two",
+            answer: "2",
           },
           {
             id: 12,
@@ -278,22 +278,22 @@ function App() {
           {
             id: 36,
             question: "How many lungs do you have?",
-            answer: "Two",
+            answer: "two",
           },
           {
             id: 37,
             question: "Breathing in air takes what into your body?",
-            answer: "Oxygen",
+            answer: "oxygen",
           },
           {
             id: 38,
             question: "And breathing out expels what?",
-            answer: "Carbon dioxide",
+            answer: "carbon dioxide",
           },
           {
             id: 39,
             question: "Is smoking cigarettes good for the lungs?",
-            answer: "No",
+            answer: "no",
           },
         ],
       },
