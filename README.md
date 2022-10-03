@@ -24,12 +24,11 @@ Extensions
 - Use a search bar which filters information as the user types
 
 # Instructions to run the app
-1. If npm is not installed, install in the top level folder using comment "npm init" 
-2. Install all npm dependencies:
+1. Install all npm dependencies:
     In terminal use command "npm i" in both the client and server folders
-3. Run the server, ensuring that :
+2. Run the server, ensuring that :
     In terminal use command "npm run server: dev"
-4. Run the client:
+3. Run the client:
     In terminal use command "npm start" 
 
 # Navigating the app
