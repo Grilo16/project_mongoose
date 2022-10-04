@@ -23,3 +23,7 @@
     text-align: center;
     font-size: 10pt;
 }
+
+#save {
+    background-color: rgb(10, 247, 247);
+}
