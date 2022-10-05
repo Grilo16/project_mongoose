@@ -8,7 +8,7 @@ const CommentContainer = ({
   selectedUser,
   editUser,
   addNewUser,
-  addCommentToCommentDb,
+  
   deleteCommentFromUserList,
 }) => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -36,7 +36,7 @@ const CommentContainer = ({
         <CommentForm
           editUser={editUser}
           selectedUser={selectedUser}
-          addCommentToCommentDb={addCommentToCommentDb}
+         
         />
         <hr />
         <Filter handleChange={updateSearchTerm} />

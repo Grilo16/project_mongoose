@@ -5,11 +5,17 @@ import OrgansGrid from "../components/OrganComponents/OrgansGrid"
 const OrganContainer = ({ organs, organToShow, showOrgan }) => {
   return (
     <>
-    <div className='organcontainer'>
-    <h2>Hover Over the Body to Learn More!</h2>
-      <OrgansGrid organToShow={organToShow} organs={organs} showOrgan={showOrgan}/>
-    </div>
-    <div className='linktoorganquiz'>Now take the <Link to="/quizzes">organ quiz >>> </Link></div>
+      <div className='organcontainer'>
+        <h2>Hover Over the Body to Learn More!</h2>
+        <OrgansGrid
+          organToShow={organToShow}
+          organs={organs}
+          showOrgan={showOrgan}
+        />
+      </div>
+      <div className='linktoorganquiz'>
+        Now take the <Link to='/quizzes'>organ quiz &#128073; </Link>
+      </div>
     </>
   )
 }

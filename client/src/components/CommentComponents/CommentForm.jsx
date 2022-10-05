@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const CommentForm = ({ selectedUser, editUser, addCommentToCommentDb}) => {
+const CommentForm = ({ selectedUser, editUser}) => {
       
     const [guestComment, setGuestComment] = useState('')
 
@@ -17,7 +17,7 @@ const CommentForm = ({ selectedUser, editUser, addCommentToCommentDb}) => {
         const updatedCommentsList = [...selectedUser.guestComments, guestComment]
         const patchObject = {guestComments: updatedCommentsList}
         editUser(guestId, patchObject)
-        addCommentToCommentDb({guestComments: guestComment})
+   
         setGuestComment("")
       };
 
