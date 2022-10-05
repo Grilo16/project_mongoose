@@ -12,8 +12,6 @@ const CommentForm = ({ selectedUser, editUser}) => {
       const handleSubmit = (e)=>{
         e.preventDefault()        
         const guestId = selectedUser._id
-        // addCommentToCommentDb(guestComment)
-        // selectedUser.guestComments.push(guestComment)
         const updatedCommentsList = [...selectedUser.guestComments, guestComment]
         const patchObject = {guestComments: updatedCommentsList}
         editUser(guestId, patchObject)

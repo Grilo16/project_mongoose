@@ -24,10 +24,7 @@ const About = () => {
           ></iframe>
         </p>
         <br></br>
-        {/* <h2>About us!</h2>
-        <p>
-        
-        </p> */}
+
         <br></br>
         <h3>Coming soon!</h3>
         <p>

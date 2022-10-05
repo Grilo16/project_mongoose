@@ -12,7 +12,7 @@ import organRepo from "./repositories/organ_repository";
 import userRepo from "./repositories/user_repository";
 import commentRepo from "./repositories/comment_repository";
 
-import "./App.css";
+
 
 function App() {
   

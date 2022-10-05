@@ -8,7 +8,6 @@ const Filter = ({ handleChange }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // setSearchTerm(e.target.value)
     handleChange(e.target.value)
   }
 

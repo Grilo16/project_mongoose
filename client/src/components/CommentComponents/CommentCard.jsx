@@ -16,7 +16,6 @@ const CommentCard = ({user, deleteCommentFromUserList}) => {
       <>
         {listOfComments.length ? (
           <>
-            {/* <p>Name: {user.guestName} </p> */}
             <div>
               <ul>{listOfComments}</ul>
             </div>
