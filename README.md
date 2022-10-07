@@ -23,6 +23,23 @@ Extensions
 - Use an API to bring in content
 - Use a search bar which filters information as the user types
 
+# Screenshots from the app
+
+Homepage:
+![0F880155-FEDE-40E9-BFCA-3EE22D1719FE](https://user-images.githubusercontent.com/107416924/194544914-6c50074c-ea99-4278-beab-853d5ed21ffc.jpeg)
+
+Burger Menu:
+![7CCEABE3-94C8-4438-ABC6-B939A169CEFF](https://user-images.githubusercontent.com/107416924/194544934-073ce8bb-7b2d-44fa-b71c-a60281412e36.jpeg)
+
+Organ Information:
+![75C2CC59-4091-4353-81B6-686C4B673C14](https://user-images.githubusercontent.com/107416924/194544966-4ab5df97-d501-4da9-b3d7-3551a149bc83.jpeg)
+
+Quiz:
+![0452AA06-AD76-4409-BEB1-BA6B49A2291F](https://user-images.githubusercontent.com/107416924/194544991-c90ad5a7-a638-4433-b57e-45415580fce5.jpeg)
+
+Comments:
+![828EF647-0C6F-4D3F-8456-67B6C7D23856](https://user-images.githubusercontent.com/107416924/194545013-64056a47-400e-4277-8535-3d92e2ff0666.jpeg)
+
 # Instructions to run the app
 1. Install all npm dependencies:
     In terminal use command "npm i" in both the client and server folders
