@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import OrganCard from "../components/OrganComponents/OrganCard"
-import OrgansGrid from "../components/OrganComponents/OrgansGrid"
+import OrganCard from '../components/OrganComponents/OrganCard'
+import OrgansGrid from '../components/OrganComponents/OrgansGrid'
 
 const OrganContainer = ({ organs, organToShow, showOrgan }) => {
   return (

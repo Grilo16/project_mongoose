@@ -1,15 +1,15 @@
-const UserScoreDetails = ({selectedUser}) => {
+const UserScoreDetails = ({ selectedUser }) => {
+  if (!selectedUser) return <></>
 
-if (!selectedUser) return <></>
-
-return (
+  return (
     <>
-    <div className = 'userScoreInfo'>
-    <h3>Total score for {selectedUser.guestName} : {selectedUser.quizScore}</h3>
-    </div>
+      <div className='userScoreInfo'>
+        <h3>
+          Total score for {selectedUser.guestName} : {selectedUser.quizScore}
+        </h3>
+      </div>
     </>
-)
-
+  )
 }
 
 export default UserScoreDetails

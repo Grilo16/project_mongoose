@@ -52,15 +52,12 @@ const QuizDetails = ({
           <p>You have answered {score} questions correctly over all quizzes!</p>
           <ul className='quizdetail'>{quizQuestionsToShow}</ul>
 
-            {<button onClick={saveScore}>Save score</button>}
-           
-
-          
+          {<button onClick={saveScore}>Save score</button>}
         </div>
       ) : (
         <div className='quizdetailheader'>
           <h2>Select an organ to take the quiz!</h2>
-  
+
           <br></br>
         </div>
       )}

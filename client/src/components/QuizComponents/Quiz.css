@@ -7,7 +7,7 @@
 
 .quizlistcontainer {
     list-style: none;
-    display: grid ;
+    display: grid;
     flex-direction: row;
     width: 300px;
     margin: 2em 1em;
@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     padding: 10px;
-    
+
 }
 
 .quizdetailheader {
@@ -40,14 +40,14 @@
 
 .questionandanswer {
     padding: 5px;
-    
+
 }
 
 .inputanswer {
     margin: auto;
     margin-bottom: 10px;
     font-family: 'Acme', sans-serif;
-    
+
 }
 
 .submitbutton {

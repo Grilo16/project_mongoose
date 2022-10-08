@@ -2,16 +2,16 @@
     background-color: rgb(244, 244, 206);
     margin-top: 20px;
     margin-left: 50px;
-    margin-right:50px;
+    margin-right: 50px;
     color: black;
     text-align: center;
     width: auto;
     padding: 10px;
     border-radius: 5px;
-    
+
 }
 
-.comment-item > b {
+.comment-item>b {
     color: black
 }
 

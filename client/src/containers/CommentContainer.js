@@ -1,4 +1,4 @@
-import {  useState } from 'react'
+import { useState } from 'react'
 import CommentForm from '../components/CommentComponents/CommentForm'
 import CommentGrid from '../components/CommentComponents/CommentGrid'
 import Filter from '../components/CommentComponents/Filter'
@@ -7,8 +7,7 @@ const CommentContainer = ({
   users,
   selectedUser,
   editUser,
-  
-  
+
   deleteCommentFromUserList,
 }) => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -33,11 +32,7 @@ const CommentContainer = ({
         <h2>Please leave your comments here!</h2>
         <hr />
 
-        <CommentForm
-          editUser={editUser}
-          selectedUser={selectedUser}
-         
-        />
+        <CommentForm editUser={editUser} selectedUser={selectedUser} />
         <hr />
         <Filter handleChange={updateSearchTerm} />
 

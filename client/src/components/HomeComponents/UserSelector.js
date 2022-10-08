@@ -20,14 +20,20 @@ const UserSelector = ({ users, onUserSelected, selectedUser }) => {
 
   return (
     <>
-    <p><b>Existing users</b> please select from the dropdown : </p>
+      <p>
+        <b>Existing users</b> please select from the dropdown :{' '}
+      </p>
       <select defaultValue='' onChange={handleChange}>
         <option value=''>Please select your name</option>
         {userOptions}
       </select>
 
       <Popup
-        trigger={<button id='hidden-button'><img src="https://previews.123rf.com/images/larryrains/larryrains1606/larryrains160600079/57535604-heart-talking.jpg"/></button>}
+        trigger={
+          <button id='hidden-button'>
+            <img src='https://previews.123rf.com/images/larryrains/larryrains1606/larryrains160600079/57535604-heart-talking.jpg' />
+          </button>
+        }
         position='right center'
       >
         <div>Hello {selectedUser.guestName}, you handsome devil!</div>

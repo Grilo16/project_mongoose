@@ -5,7 +5,10 @@ import Popup from 'reactjs-popup'
 const OrganCard = ({ organ }) => {
   return (
     <div key={organ._id}>
-      <Popup trigger={<button className='organ-button'>{organ.name}</button>} position='right center'>
+      <Popup
+        trigger={<button className='organ-button'>{organ.name}</button>}
+        position='right center'
+      >
         <div>{organ.info}</div>
       </Popup>
     </div>

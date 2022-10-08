@@ -1,15 +1,23 @@
 import './Comment.css'
 
-const Comment = ({comment, deleteCommentFromUserList, user}) => {
-
-    return <>
-    <li className="comment-item">
-     <b>{user.guestName}</b> : {comment}
-    </li>
-    <span>
-    { <button className="del-button" onClick={() => deleteCommentFromUserList(comment, user)}>Delete</button> }
-    </span>
+const Comment = ({ comment, deleteCommentFromUserList, user }) => {
+  return (
+    <>
+      <li className='comment-item'>
+        <b>{user.guestName}</b> : {comment}
+      </li>
+      <span>
+        {
+          <button
+            className='del-button'
+            onClick={() => deleteCommentFromUserList(comment, user)}
+          >
+            Delete
+          </button>
+        }
+      </span>
     </>
+  )
 }
 
 export default Comment

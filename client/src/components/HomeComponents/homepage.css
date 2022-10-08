@@ -1,8 +1,8 @@
 .homecontainer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
 .sidebyside {
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .userselector {
-  width:700px;
+  width: 700px;
   margin: 20px;
   margin-right: 150px;
   padding: 5px;
@@ -36,7 +36,7 @@ b {
 #quote {
   font-style: italic;
   font-size: 18pt;
-  color:rgb(10, 247, 247)
+  color: rgb(10, 247, 247)
 }
 
 #hidden-button {
@@ -50,13 +50,13 @@ b {
 
 #hidden-button img {
   display: block;
-  height: 130px;  
+  height: 130px;
   width: 100px;
 }
 
 #hidden-button {
-  background-image: url( 'http://thinkingstiff.com/images/matt.jpg' );
+  background-image: url('http://thinkingstiff.com/images/matt.jpg');
   background-size: 100px 130px;
-  height: 134px;  
+  height: 134px;
   width: 104px;
 }
