@@ -41,6 +41,8 @@ const About = () => {
           <li>Other features pages ( Geography , Maths , Coding etc)</li>
           <li>Search entire application</li>
           <li>Multiple choice quiz questions</li>
+          <li>fix navbar buttons so you dont have to click the word</li>
+          <li>Give the user feedback when they try to delete other user comments</li>
         </ul>
       </p>
     </>

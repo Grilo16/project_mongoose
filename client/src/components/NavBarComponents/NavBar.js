@@ -3,7 +3,15 @@ import './NavBar.css'
 import NLink from './NavLink'
 import { slide as Menu } from 'react-burger-menu'
 
-const NavBar = ({ navPages }) => {
+const NavBar = () => {
+  const navPages = [
+    { pageName: 'Home', pageLink: '/' },
+    { pageName: 'Organs', pageLink: '/organs' },
+    { pageName: 'Quizzes', pageLink: '/quizzes' },
+    { pageName: 'Comment', pageLink: '/comment' },
+    { pageName: 'About', pageLink: '/about' },
+  ]
+
   const navLinks = navPages.map((route) => {
     return (
       <>

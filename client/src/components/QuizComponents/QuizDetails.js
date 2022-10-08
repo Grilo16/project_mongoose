@@ -14,20 +14,15 @@ const QuizDetails = ({
   const score = correctAnswers.length
 
   const saveScore = () => {
-    //update selected user score to show on page
     const copyUserToUpdateScore = { ...selectedUser }
-    console.log(copyUserToUpdateScore)
+
     copyUserToUpdateScore.quizScore = score
-    console.log(copyUserToUpdateScore)
+
     setSelectedUser(copyUserToUpdateScore)
-    console.log(selectedUser)
-    //update user score in the DB and state
-    //find user by Id
+
     const userByID = findUserByID(copyUserToUpdateScore._id)
-    console.log(userByID)
-    //call edit user in db
+
     editUser(userByID[0]._id, { quizScore: score })
-    //update the user state - automatically done
   }
 
   if (!organToShow) return 'Select an organ to take the quiz!'
