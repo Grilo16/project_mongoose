@@ -43,10 +43,12 @@ Comments:
 # Instructions to run the app
 1. Install all npm dependencies:
     In terminal use command "npm i" in both the client and server folders
-2. Run the server, ensuring that :
-    In terminal use command "npm run server: dev"
-3. Run the client:
-    In terminal use command "npm start" 
+2. Seed the Database:
+    In terminal, navigate to server folder and use command "npm run seeds"
+3. Run the server:
+    In terminal, navigate to server folder and use command "npm run server: dev"
+4. Run the client:
+    In terminal, navigate to client folder and use command "npm start" 
 
 # Navigating the app
 The client should open on the homepage. There is a burger menu in the top-left corner which displays the pages in the app. Inspirational quotes can be generated from an API using the "Inspire me" button.  
