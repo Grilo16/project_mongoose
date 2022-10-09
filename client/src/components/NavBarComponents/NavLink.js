@@ -4,12 +4,9 @@ import React from 'react'
 
 function NLink({ route }) {
   return (
-    <button>
-      <Link className='burger-link' to={route.pageLink}>
-        {' '}
-        {route.pageName}{' '}
-      </Link>
-    </button>
+    <Link className='burger-link' to={route.pageLink}>
+      <button className='menu-item'>{route.pageName}</button>
+    </Link>
   )
 }
 
